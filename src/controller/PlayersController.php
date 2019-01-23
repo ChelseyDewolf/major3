@@ -35,7 +35,7 @@ class PlayersController extends Controller {
   }
 
   public function programma() {
-
+    $this->set('title', "Programma");
   }
 
 /*
