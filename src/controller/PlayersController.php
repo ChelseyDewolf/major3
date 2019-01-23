@@ -34,6 +34,10 @@ class PlayersController extends Controller {
     }
   }
 
+  public function programma() {
+
+  }
+
 /*
   private function handleSearchPlayer() {
 

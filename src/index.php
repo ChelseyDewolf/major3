@@ -7,6 +7,10 @@ $routes = array(
   'home' => array(
     'controller' => 'Players',
     'action' => 'index'
+  ),
+  'programma' => array(
+    'controller' => 'Players',
+    'action' => 'programma'
   )
 );
 

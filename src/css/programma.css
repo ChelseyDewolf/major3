@@ -1,0 +1,52 @@
+.bg {
+  background-image:
+    linear-gradient(
+      to right,
+      #4680d0,
+      #376bc6,
+      #3054ba,
+      #313dab,
+      #36219a
+    );
+}
+
+.nav__programma {
+  padding-bottom: 5rem;
+}
+
+.radio-toolbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.radio-toolbar input[type='radio'] {
+  display: none;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  background-image:
+    linear-gradient(
+      to right,
+      #4680d0,
+      #376bc6,
+      #3054ba,
+      #313dab,
+      #36219a
+    );
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 10rem;
+}
+
+.radio-toolbar label:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4680d0, #4680d0);
+  transition: all ease .3s;
+}
+
+.radio-toolbar input[type='radio']:checked + label {
+  opacity: .8;
+}

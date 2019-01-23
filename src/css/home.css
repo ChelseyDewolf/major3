@@ -1,6 +1,6 @@
 /* ------------------------ header ------------------------ */
 
-header {
+.header {
   background-image: url(../assets/img/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +17,7 @@ header {
 }
 
 .navigation__list__item a {
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--white);
 }
@@ -36,6 +37,9 @@ header {
 }
 
 .button {
+  font-family: 'Glacial Indifference';
+  font-weight: bold;
+  font-size: 1.4rem;
   background-image:
     linear-gradient(
       to right,
@@ -76,4 +80,92 @@ header {
   font-size: 3rem;
   display: flex;
   justify-content: flex-end;
+}
+
+.countdown__digites {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown__digit {
+  font-size: 5rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.countdown__title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.about {
+  padding-top: 5rem;
+}
+
+.about__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.uitgelicht {
+  margin-top: 10rem;
+  background-image:
+    linear-gradient(
+      to right,
+      #2dc8c2,
+      #2dc8c2 71.59%,
+      white 71.59%
+    );
+  background-repeat: no-repeat;
+}
+
+.uitgelicht__titel {
+  color: white;
+  font-size: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.uitgelicht__bollen {
+  margin-left: 20rem;
+}
+
+.uitgelicht__bg {
+  height: 50rem;
+  background-image: linear-gradient(to right, #2dc8c2, #2dc8c2 80%, white 80%);
+  -webkit-box-shadow: 0 0 69px -4px rgba(0, 0, 0, .75);
+}
+
+.vrijwilliger__grid {
+  background-color: red;
+  display: grid;
+}
+
+.gratis {
+  height: 100%;
+}
+
+.gratis__foto {
+  margin-top: 20rem;
+  background-image: url(../assets/img/eventfoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.gratis__foto__titel {
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.gratis__foto__text {
+  font-size: 3rem;
+  color: white;
 }
