@@ -134,13 +134,13 @@
 
 .uitgelicht__bg {
   height: 50rem;
+  width: 100%;
   background-image: linear-gradient(to right, #2dc8c2, #2dc8c2 80%, white 80%);
   -webkit-box-shadow: 0 0 69px -4px rgba(0, 0, 0, .75);
 }
 
-.vrijwilliger__grid {
-  background-color: red;
-  display: grid;
+.vrijwilliger {
+  padding-bottom: 10rem;
 }
 
 .gratis {
@@ -168,4 +168,62 @@
 .gratis__foto__text {
   font-size: 3rem;
   color: white;
+}
+
+.grid-container {
+  margin: 0 auto;
+  width: 105rem;
+  display: grid;
+  grid-template-columns: 5rem 2fr 1fr 5rem;
+  grid-template-rows: 5rem 1fr 1fr 1fr 5rem;
+  grid-template-areas: 'padding-top padding-top padding-top padding-top' '. titel img .' '. text img .' '. emaileninput img .' 'padding-bottom padding-bottom padding-bottom padding-bottom';
+  background-color: var(--accent-color);
+}
+
+.padding-top {
+  grid-area: padding-top;
+}
+
+.padding-bottom {
+  grid-area: padding-bottom;
+}
+
+.titel {
+  grid-area: titel;
+}
+
+.text {
+  grid-area: text;
+}
+
+.emaileninput {
+  grid-area: emaileninput;
+}
+
+.img {
+  grid-area: img;
+}
+
+.vrijwilliger__email {
+  border-radius: 10rem;
+  border: none;
+  height: 3.5rem;
+  width: 40%;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.email-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.vrijwilliger__text {
+  color: white;
+}
+
+.vrijwilliger__button {
+  width: 30%;
+  margin-top: 1rem;
 }

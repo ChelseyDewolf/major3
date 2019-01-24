@@ -173,3 +173,17 @@
 .picture {
   grid-area: 1 / 1 / 4 / 5;
 } */
+
+.programma-grid {
+  grid-template-columns: 1fr 2fr;
+}
+
+.baas {
+  grid-column: 1/1;
+}
+
+.programmatssh {
+  grid-column: 2/2;
+  background-color: var(--primary-color);
+  height: 10vh;
+}

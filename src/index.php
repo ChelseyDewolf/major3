@@ -11,6 +11,10 @@ $routes = array(
   'programma' => array(
     'controller' => 'Players',
     'action' => 'programma'
+  ),
+  'detail' => array(
+    'controller' => 'Players',
+    'action' => 'detail'
   )
 );
 

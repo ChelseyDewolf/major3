@@ -22,7 +22,7 @@
            <footer class="footer">
               <div class="footer__container container">
                 <div class="footer__form">
-                  <form action="">
+                  <form action="" class="footer-form">
                     <div class="footer__form__container">
                       <label class="footer__label" for="">Schrijf je nu in om extra nieuws te <br>
                         ontvangen over ons event.</label>

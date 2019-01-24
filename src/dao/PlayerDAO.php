@@ -4,26 +4,30 @@ require_once( __DIR__ . '/DAO.php');
 
 class PlayerDAO extends DAO {
 
-  public function search($max=10, $name = ''){
-    $sql = "SELECT * FROM `shows` WHERE 1";
+  public function search($name = '', $day = ''){
+    $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` WHERE 1";
 
     if (!empty($name)) {
       $sql .= " AND `show_name` LIKE :name";
     }
-    // if (!empty($nationality)) {
-    //   $sql .= " AND `Nationality` = :nationality";
-    // }
 
-    $sql .= " ORDER BY `show_name` DESC LIMIT :max";
+    if (!empty($day)) {
+      $sql .= " AND `date` LIKE :day";
+    }
+
+    $sql .= " ORDER BY `show_name` DESC";
 
     $stmt = $this->pdo->prepare($sql);
     if (!empty($name)) {
       $stmt->bindValue(':name','%'.$name.'%');
     }
+
+    if (!empty($day)) {
+      $stmt->bindValue(':day','%'.$day.'%');
+    }
     // if (!empty($nationality)) {
     //   $stmt->bindValue(':nationality', $nationality);
     // }
-    $stmt->bindValue(':max', $max);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -43,5 +47,20 @@ class PlayerDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  // public function selectAllActs($limit = 100){
+  //   $sql = "SELECT * FROM `shows` LIMIT :limit";
+  //   $stmt = $this->pdo->prepare($sql);
+  //   $stmt->bindValue(':limit', $limit);
+  //   $stmt->execute();
+  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  // }
+
+  public function test($limit = 100){
+    $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` LIMIT :limit";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':limit', $limit);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
 }

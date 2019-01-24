@@ -48,6 +48,34 @@
   <h2 class="hidden">Uitgelicht</h2>
   <p class="uitgelicht__titel container">Uitgelicht</p>
   <div class="uitgelicht__bg container">
+    <div class="uitgelicht-grid-container">
+      <div class="uitgelicht-act-een">
+      <article>
+        <div>
+          <p>Titel</p>
+          <div>
+            <p>Datum</p>
+            <p>Tijd</p>
+          </div>
+        </div>
+      </article>
+      </div>
+      <div class="uitgelicht-act-twee">
+      <article>Kaas</article>
+      </div>
+      <div class="uitgelicht-act-drie">
+      <article>Kaas</article>
+      </div>
+      <div class="uitgelicht-act-vier">
+      <article>Kaas</article>
+      </div>
+      <div class="uitgelicht-act-vijf">
+      <article>Kaas</article>
+      </div>
+      <div class="uitgelicht-act-zes">
+      <article>Kaas</article>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -64,7 +92,27 @@
 </section>
 <section class="vrijwilliger container">
   <h2 class="hidden">Schrijf je in als vrijwilliger</h2>
-  <div class="vrijwilliger__grid">
-
+  <div class="grid-container">
+  <div class="padding-top"></div>
+  <div class="padding-bottom"></div>
+  <div class="titel uitgelicht__titel">Help jij ook mee?</div>
+  <div class="text vrijwilliger__text">Ons gehele festival wordt georganiseerd door vrijwilligers. <br>
+    Daarom willen wij een warme oproep doen om extra <br>
+    vrijwilligers aan te werven. Wil jij meehelpen aan dit fantastische event? <br>
+    Schrijf je dan nu in!</div>
+  <div class="emaileninput">
+    <form action="" class="">
+    <span class="error"></span>
+    <div class="email-container">
+      <input class="vrijwilliger__email" type="email" placeholder="E-mail" required>
+      <input class="button vrijwilliger__button" type="submit" value="Verstuur">
+      </div>
+    </form>
   </div>
+  <div class="img"><img src="././assets/img/volunteer.png" alt=""></div>
+</div>
+</div>
+
 </section>
+
+

@@ -12,15 +12,7 @@ class PlayersController extends Controller {
   }
 
   public function index() {
-    if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $players = $this->playerDAO->search(25, $_GET['name']);
-      $this->set('name',$_GET['name']);
-      // $this->set('nationality',$_GET['nationality']);
-    }else{
-      $players = $this->playerDAO->search();
-      $this->set('name','');
-      $this->set('nationality','');
-    }
+
 
     $this->set('players', $players);
     $this->set('title', "Home");
@@ -35,7 +27,29 @@ class PlayersController extends Controller {
   }
 
   public function programma() {
+    $playerDAO = new PlayerDAO();
+    if (!empty($_GET['page']) && $_GET['page'] == 'programma') {
+      $search = $_GET['search'];
+      $day = $_GET['dag'];
+      $programmas = $this->playerDAO->search($search, $day);
+
+      // $this->set('nationality',$_GET['nationality']);
+    }else{
+      $programmas = $this->playerDAO->search();
+      $this->set('name','');
+    }
+    // $programmas = $playerDAO->test();
+    $this->set('programmas', $programmas);
     $this->set('title', "Programma");
+  }
+  public function detail() {
+
+    $playerDAO = new PlayerDAO();
+    if (!empty($_GET['id'])) {
+      $programma = $playerDAO->selectById($_GET['id']);
+    }
+    $this->set('programma', $programma);
+    $this->set('title', "Detail");
   }
 
 /*

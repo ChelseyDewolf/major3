@@ -7,20 +7,39 @@ require('./style.css');
   const day = hour * 24;
 
   const timeRemaining = new Date('Aug 24, 2019 00:00:00').getTime();
-  const x = setInterval(function() {
-    const present = new Date().getTime(),
-      gap = timeRemaining - present;
 
-    (document.querySelector('.remaining-days').innerText = Math.floor(
-      gap / day
-    )),
-    (document.querySelector('.remaining-hours').innerText = Math.floor(
-      (gap % day) / hour
-    )),
-    (document.querySelector('.remaining-minutes').innerText = Math.floor(
-      (gap % hour) / minute
-    ));
-  });
+  const setInterval = () => {
+    if (document.querySelector('.remaining-days')) {
+      const present = new Date().getTime(),
+        gap = timeRemaining - present;
+
+      (document.querySelector('.remaining-days').innerText = Math.floor(
+        gap / day
+      )),
+      (document.querySelector('.remaining-hours').innerText = Math.floor(
+        (gap % day) / hour
+      )),
+      (document.querySelector('.remaining-minutes').innerText = Math.floor(
+        (gap % hour) / minute
+      ));
+    }
+  };
+  // const x = setInterval(function() {
+  //   if (document.querySelector('.remaining-days')) {
+  //     const present = new Date().getTime(),
+  //       gap = timeRemaining - present;
+
+  //     (document.querySelector('.remaining-days').innerText = Math.floor(
+  //       gap / day
+  //     )),
+  //     (document.querySelector('.remaining-hours').innerText = Math.floor(
+  //       (gap % day) / hour
+  //     )),
+  //     (document.querySelector('.remaining-minutes').innerText = Math.floor(
+  //       (gap % hour) / minute
+  //     ));
+  //   }
+  // });
 
   // --------------- Filter ---------------
 
@@ -28,10 +47,12 @@ require('./style.css');
     $players = document.querySelector(`.players__list`);
 
   const init = () => {
+    setInterval();
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
-    const $form = document.querySelector(`form`);
+    const $form = document.querySelector(`.footer-form`);
+    console.log($form);
     $form.noValidate = true;
     $form.addEventListener(`submit`, handeSubmitForm);
 
