@@ -19,7 +19,7 @@
   </nav>
   </div>
   </header>
-  <section class="programma">
+  <section class="programma container">
     <h2 class="hidden">Programma</h2>
       <form action="index.php">
         <input type="hidden" name="page" value="programma" />
@@ -54,13 +54,13 @@
             <legend class="filter-checkbox__titel">Filter</legend>
             <label class="filter-checkbox__label" for="">Type</label>
               <div class="test"">
-                <input type="checkbox" name="type1" value="voorstelling"><span>Voorstelling</span>
+                <input type="checkbox" name="genre" value="voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'voorstelling') { echo 'checked';}?>><span>Voorstelling</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="type2" value="straatact"><span>Straatact</span>
+                <input type="checkbox" name="genre" value="straatact" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'straatact') { echo 'checked';}?>><span>Straatact</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="type3" value="famielie-act"><span>Familie-act</span>
+                <input type="checkbox" name="genre" value="familie voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'familie voorstelling') { echo 'checked';}?>><span>Familie-act</span>
               </div>
             <label class="filter-checkbox__label" for="">Locatie</label>
               <div class="test">
@@ -116,20 +116,22 @@
       <div class="programmatssh">
 
       </div>
-      <ul class="players__list">
-        <?php
+
+      <div class="programma-grid-container">
+      <?php
           foreach($programmas as $programma){
             ?>
-            <li class='player'>
-            <li></li>
-                <span><a href="index.php?page=detail&amp;id=<?php echo $programma['id'];?>"><?php echo $programma['show_name'];?></a></span>
-                <span class='player__name'><?php echo $programma["date"];?></span>
-                <span class='player__name'><?php echo $programma["hour"];?></span>
-
-            </li>
-            <?php
-          }
-        ?>
-</ul>
-
+          <a href="index.php?page=detail&amp;id=<?php echo $programma['id'];?>"><article class="act-grid-container">
+          <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p><?php echo $programma['show_name'];?></p>
+          <p><?php echo $programma["date"];?></p>
+          <p><?php echo $programma["hour"];?></p>
+        </div>
+          </article></a>
+          <?php
+           }
+           ?>
+      </div>
   </section>
+

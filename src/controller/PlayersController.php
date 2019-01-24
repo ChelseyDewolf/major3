@@ -31,7 +31,8 @@ class PlayersController extends Controller {
     if (!empty($_GET['page']) && $_GET['page'] == 'programma') {
       $search = $_GET['search'];
       $day = $_GET['dag'];
-      $programmas = $this->playerDAO->search($search, $day);
+      $genre = $_GET['genre'];
+      $programmas = $this->playerDAO->search($search, $day, $genre);
 
       // $this->set('nationality',$_GET['nationality']);
     }else{
@@ -42,6 +43,7 @@ class PlayersController extends Controller {
     $this->set('programmas', $programmas);
     $this->set('title', "Programma");
   }
+
   public function detail() {
 
     $playerDAO = new PlayerDAO();

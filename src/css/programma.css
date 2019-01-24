@@ -187,3 +187,12 @@
   background-color: var(--primary-color);
   height: 10vh;
 }
+
+.programma-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . .';
+  grid-gap: 2rem;
+  padding-bottom: 5rem;
+}
