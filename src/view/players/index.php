@@ -37,7 +37,7 @@
       <p class="countdown__digit"><span class="highlight"><span class="remaining-hours"></span></span> hours</p>
       <p class="countdown__digit"><span class="highlight"><span class="remaining-minutes"></span></span> min</p>
     </div>
-  <p class="countdown__title">Strecht your legs, it's <span class="highlight">almost</span> that time of the year again</p>
+  <p class="countdown__title">Strecht your legs, it's <span class="highlight"> almost</span> that time of the year again</p>
 </section>
 <section class="about container">
   <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
@@ -48,7 +48,7 @@
   <h2 class="hidden">Uitgelicht</h2>
   <p class="uitgelicht__titel container">Uitgelicht</p>
   <div class="uitgelicht__bg container">
-    <div class="uitgelicht-grid-container">
+    <!-- <div class="uitgelicht-grid-container">
       <div class="uitgelicht-act-een">
       <article>
         <div>
@@ -75,6 +75,56 @@
       <div class="uitgelicht-act-zes">
       <article>Kaas</article>
       </div>
+    </div> -->
+    <div class="uitgelicht-grid-container">
+     <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
+      <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
+      <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
+      <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
+      <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
+      <a href=""> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <p>Titel</p>
+          <p>Datum</p>
+          <p>Uur</p>
+        </div>
+      </div></a>
     </div>
 
   </div>
@@ -85,10 +135,35 @@
     <p class="container"><span class="gratis__foto__titel container">Gratis</span> <br> <span class="gratis__foto__text">Sfeer verzekerd voor het gehele gezin</span> </p>
   </div>
 </section>
-<section class="hoofdlocaties">
+<section class="hoofdlocaties container">
   <h2 class="hidden">Hoofdlocaties</h2>
-
-
+  <div class="locatie-grid-container">
+  <div class="locatie-foto">
+    <img class="locatie-foto__img" src="././assets/img/kaart.png" alt="">
+  </div>
+  <div class="locatie-padding"></div>
+  <div class="locatie-padding-top"></div>
+  <div class="locatie-padding-bottom"></div>
+  <div class="locatie-titel uitgelicht__titel">Hoofdlocaties</div>
+  <div class="locatie-adress">
+   <div class="locatie">
+    <p>Locatie 1 <br>
+      Kolverikstraat 31 <br>
+      8560 Wevelgem</p>
+    </div>
+    <p>Locatie 2 <br>
+      Kolverikstraat 31 <br>
+      8560 Wevelgem</p>
+  </div>
+  <div class="loactie-ways">
+    <p class="ways">Gebruik ways ter ere van <br> dit event!</p>
+    <a href=""><img src="././assets/img/appstore.png" alt=""></a>
+    <a href=""><img src="././assets/img/playstore.png" alt=""></a>
+  </div>
+</div>
+  <div class="locatie-design">
+    <img src="././assets/img/twee-design.png" alt="">
+  </div>
 </section>
 <section class="vrijwilliger container">
   <h2 class="hidden">Schrijf je in als vrijwilliger</h2>

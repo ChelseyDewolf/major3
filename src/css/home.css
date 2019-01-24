@@ -139,12 +139,42 @@
   -webkit-box-shadow: 0 0 69px -4px rgba(0, 0, 0, .75);
 }
 
+.uitgelicht-grid-container {
+  height: 100%;
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: '. . .' '. . .';
+}
+
+.foto {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.act-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: 'act-foto' 'act-tekst';
+}
+
+.act-foto {
+  grid-area: act-foto;
+}
+
+.act-tekst {
+  grid-area: act-tekst;
+}
+
 .vrijwilliger {
   padding-bottom: 10rem;
 }
 
 .gratis {
-  height: 100%;
+  padding-bottom: 20rem;
 }
 
 .gratis__foto {
@@ -168,6 +198,70 @@
 .gratis__foto__text {
   font-size: 3rem;
   color: white;
+}
+
+.locatie-grid-container {
+  width: 105rem;
+  background: #f7f7f7;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 20px 2fr;
+  grid-template-rows: 20px 1fr 1fr 1fr 20px;
+  grid-template-areas: 'locatie-foto locatie-padding locatie-padding-top' 'locatie-foto locatie-padding locatie-titel' 'locatie-foto locatie-padding locatie-adress' 'locatie-foto locatie-padding locatie-ways' 'locatie-foto locatie-padding locatie-padding-bottom';
+}
+
+.locatie-foto {
+  grid-area: locatie-foto;
+}
+
+.locatie-foto__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.locatie-padding {
+  grid-area: locatie-padding;
+}
+
+.locatie-padding-top {
+  grid-area: locatie-padding-top;
+}
+
+.locatie-padding-bottom {
+  grid-area: locatie-padding-bottom;
+}
+
+.locatie-titel {
+  grid-area: locatie-titel;
+  color: black;
+}
+
+.locatie-adress {
+  grid-area: locatie-adress;
+  display: flex;
+  margin-top: -2rem;
+}
+
+.locatie-ways {
+  grid-area: locatie-ways;
+}
+
+.ways {
+  font-size: 2rem;
+  margin-top: -2rem;
+  padding-bottom: 1rem;
+}
+
+.locatie {
+  padding-right: 5rem;
+}
+
+.locatie-design {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -22rem;
+  padding-bottom: 20rem;
 }
 
 .grid-container {

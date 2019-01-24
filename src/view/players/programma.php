@@ -34,11 +34,11 @@
                 <label for="vrijdag">Vrijdag 24/08</label>
               </div>
               <div class="radio-toolbar__container">
-                <input type="radio" id="zaterdag" name="dag" value="ZA 25 - 08"  <?php if(!empty($_GET['dag']) && $_GET['dag'] == 'VR 25 - 08') { echo 'checked';}?>>
+                <input type="radio" id="zaterdag" name="dag" value="ZA 25 - 08"  <?php if(!empty($_GET['dag']) && $_GET['dag'] == 'ZA 25 - 08') { echo 'checked';}?>>
                 <label for="zaterdag">Zaterdag 25/08</label>
               </div>
               <div class="radio-toolbar__container">
-                <input type="radio" id="zondag" name="dag" value="ZO 26 - 08"  <?php if(!empty($_GET['dag']) && $_GET['dag'] == 'VR 26 - 08') { echo 'checked';}?>>
+                <input type="radio" id="zondag" name="dag" value="ZO 26 - 08"  <?php if(!empty($_GET['dag']) && $_GET['dag'] == 'ZO 26 - 08') { echo 'checked';}?>>
                 <label for="zondag">Zondag 26/08</label>
               </div>
                 </div>
