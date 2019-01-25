@@ -1,0 +1,75 @@
+.detail-grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: .5fr 3fr 1fr;
+  grid-template-areas: 'detail-titel .' 'detail-img detail-para' 'detail-tekst .';
+}
+
+.detail-titel {
+  grid-area: detail-titel;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+.detail-titel__span {
+  padding-left: 2rem;
+}
+
+.detail-img {
+  grid-area: detail-img;
+}
+
+.detail-tekst {
+  grid-area: detail-tekst;
+}
+
+.detail-para {
+  grid-area: detail-para;
+  display: flex;
+}
+
+.website {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.datum {
+  color: white;
+  position: absolute;
+  padding-top: 46rem;
+  padding-left: 4rem;
+  font-size: 4rem;
+}
+
+.detail-back__button {
+  background-color: darkgray;
+  border: none;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 1000rem;
+}
+
+.detail-para__locatie {
+  padding-left: 2rem;
+}
+
+.gelijkaardige-acts__titel {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.gelijkaardige-acts__button {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 15%;
+}

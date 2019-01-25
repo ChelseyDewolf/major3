@@ -8,20 +8,23 @@ require('./style.css');
 
   const timeRemaining = new Date('Aug 24, 2019 00:00:00').getTime();
 
-  const setInterval = () => {
+  const remainDays = () => {
     if (document.querySelector('.remaining-days')) {
-      const present = new Date().getTime(),
-        gap = timeRemaining - present;
+      setInterval(() => {
+        console.log(gap);
+        const present = new Date().getTime(),
+          gap = timeRemaining - present;
 
-      (document.querySelector('.remaining-days').innerText = Math.floor(
-        gap / day
-      )),
-      (document.querySelector('.remaining-hours').innerText = Math.floor(
-        (gap % day) / hour
-      )),
-      (document.querySelector('.remaining-minutes').innerText = Math.floor(
-        (gap % hour) / minute
-      ));
+        (document.querySelector('.remaining-days').innerText = Math.floor(
+          gap / day
+        )),
+        (document.querySelector('.remaining-hours').innerText = Math.floor(
+          (gap % day) / hour
+        )),
+        (document.querySelector('.remaining-minutes').innerText = Math.floor(
+          (gap % hour) / minute
+        ));
+      }, 100);
     }
   };
   // const x = setInterval(function() {
@@ -47,16 +50,18 @@ require('./style.css');
     $players = document.querySelector(`.players__list`);
 
   const init = () => {
-    setInterval();
+    remainDays();
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
-    const $form = document.querySelector(`.footer-form`);
-    console.log($form);
-    $form.noValidate = true;
-    $form.addEventListener(`submit`, handeSubmitForm);
+    const $forms = document.querySelectorAll(`.footer-form`);
+    console.log($forms);
+    $forms.forEach($form => {
+      $form.noValidate = true;
+      $form.addEventListener(`submit`, handeSubmitForm);
 
-    addValidationListeners(Array.from($form.elements));
+      addValidationListeners(Array.from($form.elements));
+    });
   };
 
   const handleLoadPlayers = data => {

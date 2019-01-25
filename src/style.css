@@ -1,6 +1,7 @@
 @import './css/reset.css';
 @import './css/home.css';
 @import './css/programma.css';
+@import './css/detail.css';
 
 :root {
   --primary-color: #2dc8c2;

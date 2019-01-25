@@ -15,7 +15,7 @@ class PlayersController extends Controller {
 
     $playerDAO = new PlayerDAO();
 
-      $acts = $playerDAO->test();
+      $acts = $playerDAO->uitgelicht();
 
       $this->set('acts', $acts);
 
@@ -36,10 +36,20 @@ class PlayersController extends Controller {
   public function programma() {
     $playerDAO = new PlayerDAO();
     if (!empty($_GET['page']) && $_GET['page'] == 'programma') {
-      $search = $_GET['search'];
-      $day = $_GET['dag'];
-      $genre = $_GET['genre'];
-      $programmas = $this->playerDAO->search($search, $day, $genre);
+      $search = '';
+      if(!empty($_GET['search'])){
+        $search = $_GET['search'];
+      }
+      $dag = '';
+      if(!empty($_GET['dag'])){
+        $dag = $_GET['dag'];
+      }
+      $genre = '';
+      if(!empty($_GET['genre'])){
+        $genre = $_GET['genre'];
+      }
+
+      $programmas = $this->playerDAO->search($search, $dag, $genre);
 
       // $this->set('nationality',$_GET['nationality']);
     }else{
@@ -55,9 +65,9 @@ class PlayersController extends Controller {
 
     $playerDAO = new PlayerDAO();
     if (!empty($_GET['id'])) {
-      $programma = $playerDAO->selectById($_GET['id']);
+      $programmas = $playerDAO->selectById($_GET['id']);
     }
-    $this->set('programma', $programma);
+    $this->set('programmas', $programmas);
     $this->set('title', "Detail");
   }
 

@@ -49,75 +49,61 @@
               </div>
             </div>
           </fieldset>
+          <div class="filter-acts-container">
           <fieldset>
             <div class="filter-checkbox container">
             <legend class="filter-checkbox__titel">Filter</legend>
             <label class="filter-checkbox__label" for="">Type</label>
               <div class="test"">
-                <input type="checkbox" name="genre" value="voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'voorstelling') { echo 'checked';}?>><span>Voorstelling</span>
+                <input type="checkbox" name="genre[]" value="voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'voorstelling') { echo 'checked';}?>><span>Voorstelling</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="genre" value="straatact" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'straatact') { echo 'checked';}?>><span>Straatact</span>
+                <input type="checkbox" name="genre[]" value="straatact" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'straatact') { echo 'checked';}?>><span>Straatact</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="genre" value="familie voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'familie voorstelling') { echo 'checked';}?>><span>Familie-act</span>
+                <input type="checkbox" name="genre[]" value="familie voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'familie voorstelling') { echo 'checked';}?>><span>Familie-act</span>
               </div>
             <label class="filter-checkbox__label" for="">Locatie</label>
               <div class="test">
-            <input type="checkbox" name="locatie1" value="speelplkabsdebever"><span>Speelpl. KA/BS de Bever</span>
+            <input type="checkbox" name="loactie[]" value="1" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '1') { echo 'checked';}?>><span>Speelpl. KA/BS de Bever</span>
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie2" value="oudatletiekplein"><span>Oud Atletiekplein</span>
+            <input type="checkbox" name="loactie[]" value="2" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '2') { echo 'checked';}?>><span>Oud Atletiekplein</span>
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie3" value="locatie3">Locatie 3
+            <input type="checkbox" name="loactie[]" value="3" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '3') { echo 'checked';}?>>Locatie 3
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie4" value="diedrikvanbevenlaan">Diedrik Van Beverenlaan
+            <input type="checkbox" name="loactie[]" value="4" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '4') { echo 'checked';}?>>Diedrik Van Beverenlaan
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie5" value="yzerhand">Yzerhand
+            <input type="checkbox" name="loactie[]" value="5" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '5') { echo 'checked';}?>>Yzerhand
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie6" value="vrasenstraat">vrasenstraat
+            <input type="checkbox" name="loactie[]" value="6" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '6') { echo 'checked';}?>>vrasenstraat
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie7" value="warande">Warande
+            <input type="checkbox" name="loactie[]" value="7" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '7') { echo 'checked';}?>>Warande
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie8" value="grotemarkt">Grote Markt
+            <input type="checkbox" name="loactie[]" value="8 <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '8') { echo 'checked';}?>">Grote Markt
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie9" value="locatie9">Locatie 9
+            <input type="checkbox" name="loactie[]" value="9" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '9') { echo 'checked';}?>>Locatie 9
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie10" value="kloosterstraat">Kloosterstraat
+            <input type="checkbox" name="loactie[]" value="10" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '10') { echo 'checked';}?>>Kloosterstraat
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie11" value="olympischzwembad">Olympisch zwembad
+            <input type="checkbox" name="loactie[]" value="11" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '11') { echo 'checked';}?>>Olympisch zwembad
               </div>
               <div class="test">
-            <input type="checkbox" name="locatie12" value="opdestraat">Op de straat
+            <input type="checkbox" name="loactie[]" value="12" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '12') { echo 'checked';}?>>Op de straat
               </div>
             <input class="button filter-checkbox__button" type="submit">
             </div>
           </fieldset>
-      </form>
-      <!-- <ul class="programma-grid container">
-        <li class="programma-grid__item"">
-          <article class="act">
-            <img class="act__picture" src="https://source.unsplash.com/random/500x163" alt="">
-            <h3 class="act__title">Dit is een test</h3>
-            <p class="act__date">ZA 24 - 08</p>
-            <p class="act__time"></p>
-          </article>
-        </li>
-      </ul> -->
-      <div class="programmatssh">
-
-      </div>
-
-      <div class="programma-grid-container">
+          <div class="programma-grid-container">
       <?php
           foreach($programmas as $programma){
             ?>
@@ -140,5 +126,8 @@
            }
            ?>
       </div>
+          </div>
+      </form>
+
   </section>
 

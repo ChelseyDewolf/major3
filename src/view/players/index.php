@@ -52,21 +52,22 @@
     <?php
           foreach($acts as $act){
             ?>
-     <a href="index.php?page=detail&amp;id=<?php echo $act['id'];?>"> <div class="act-grid-container">
+     <a class="act" href="index.php?page=detail&amp;id=<?php echo $act['id'];?>">
+      <article class="act-grid-container">
         <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <h3 class="act-titel"><?php echo $act['show_name'] ?></h3>
-          <div class="act-para">
-            <p><?php echo $act['date'] ?></p>
-            <p class="act-para__uur"><?php echo $act['hour'] ?></p>
+          <div class="act-tekst">
+            <h3 class="act-titel"><?php echo $act['show_name'] ?></h3>
+            <div class="act-para">
+              <p><?php echo $act['date'] ?></p>
+              <p class="act-para__uur"><?php echo $act['hour'] ?></p>
           </div>
         </div>
-      </div></a>
+          </article>
+    </a>
       <?php
            }
            ?>
     </div>
-
   </div>
 </section>
 <section class="gratis">

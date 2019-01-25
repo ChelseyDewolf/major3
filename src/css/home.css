@@ -189,6 +189,10 @@
   margin-left: 2rem;
 }
 
+.act-tekst:hover {
+  background-color: var(--accent-color);
+}
+
 .vrijwilliger {
   padding-bottom: 10rem;
 }
