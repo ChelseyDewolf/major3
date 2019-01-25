@@ -13,8 +13,15 @@ class PlayersController extends Controller {
 
   public function index() {
 
+    $playerDAO = new PlayerDAO();
 
-    $this->set('players', $players);
+      $acts = $playerDAO->test();
+
+      $this->set('acts', $acts);
+
+
+
+    // $this->set('players', $players);
     $this->set('title', "Home");
 
     // $this->set('countries', $this->playerDAO->selectAllCountries());

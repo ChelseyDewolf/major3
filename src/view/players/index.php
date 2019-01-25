@@ -21,7 +21,7 @@
   </div>
     <div class="container slogan-button__container">
       <p class="slogan">Internationaal <br> Straattheaterfestival <br> Beveren</p>
-      <button class="button">Ontdek</button>
+      <a href="#countdown" class="button">Ontdek</a>
     </div>
   <div class="header__design-element container">
     <img src="././assets/img/design-element.png" alt="">
@@ -30,7 +30,7 @@
     <p>AUG <br> 24 - 25 - 26</p>
   </div>
 </header>
-<section class="countdown container">
+<section class="countdown container" id="countdown">
   <h2 class="hidden">Countdown</h2>
     <div class="countdown__digites">
       <p class="countdown__digit"><span class="highlight"><span class="remaining-days"></span></span> days</p>
@@ -48,83 +48,23 @@
   <h2 class="hidden">Uitgelicht</h2>
   <p class="uitgelicht__titel container">Uitgelicht</p>
   <div class="uitgelicht__bg container">
-    <!-- <div class="uitgelicht-grid-container">
-      <div class="uitgelicht-act-een">
-      <article>
-        <div>
-          <p>Titel</p>
-          <div>
-            <p>Datum</p>
-            <p>Tijd</p>
+    <div class="uitgelicht-grid-container">
+    <?php
+          foreach($acts as $act){
+            ?>
+     <a href="index.php?page=detail&amp;id=<?php echo $act['id'];?>"> <div class="act-grid-container">
+        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-tekst">
+          <h3 class="act-titel"><?php echo $act['show_name'] ?></h3>
+          <div class="act-para">
+            <p><?php echo $act['date'] ?></p>
+            <p class="act-para__uur"><?php echo $act['hour'] ?></p>
           </div>
         </div>
-      </article>
-      </div>
-      <div class="uitgelicht-act-twee">
-      <article>Kaas</article>
-      </div>
-      <div class="uitgelicht-act-drie">
-      <article>Kaas</article>
-      </div>
-      <div class="uitgelicht-act-vier">
-      <article>Kaas</article>
-      </div>
-      <div class="uitgelicht-act-vijf">
-      <article>Kaas</article>
-      </div>
-      <div class="uitgelicht-act-zes">
-      <article>Kaas</article>
-      </div>
-    </div> -->
-    <div class="uitgelicht-grid-container">
-     <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
       </div></a>
-      <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
-      </div></a>
-      <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
-      </div></a>
-      <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
-      </div></a>
-      <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
-      </div></a>
-      <a href=""> <div class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p>Titel</p>
-          <p>Datum</p>
-          <p>Uur</p>
-        </div>
-      </div></a>
+      <?php
+           }
+           ?>
     </div>
 
   </div>

@@ -121,14 +121,21 @@
       <?php
           foreach($programmas as $programma){
             ?>
-          <a href="index.php?page=detail&amp;id=<?php echo $programma['id'];?>"><article class="act-grid-container">
-          <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
-        <div class="act-tekst">
-          <p><?php echo $programma['show_name'];?></p>
-          <p><?php echo $programma["date"];?></p>
-          <p><?php echo $programma["hour"];?></p>
-        </div>
-          </article></a>
+          <a href="index.php?page=detail&amp;id=<?php echo $programma['id'];?>">
+          <article class="act-grid-container">
+          <h3 class="hidden"><?php echo $programma['show_name'];?></h3>
+          <div class="act-foto">
+          <img class="foto" src="././assets/img/stock-foto.jpg" alt="">
+          </div>
+          <div class="act-tekst">
+            <p class="act-titel"><?php echo $programma['show_name'];?></p>
+            <div class="act-para">
+            <p><?php echo $programma["date"];?></p>
+            <p class="act-para__uur"><?php echo $programma["hour"];?></p>
+          </div>
+          </div>
+          </article>
+          </a>
           <?php
            }
            ?>

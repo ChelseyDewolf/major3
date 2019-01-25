@@ -63,8 +63,8 @@ class PlayerDAO extends DAO {
   //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
   // }
 
-  public function test($limit = 100){
-    $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` LIMIT :limit";
+  public function test($limit = 6){
+    $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` ORDER BY `show_name` DESC LIMIT :limit";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':limit', $limit);
     $stmt->execute();
