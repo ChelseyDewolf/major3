@@ -25,12 +25,6 @@ class PlayersController extends Controller {
     $this->set('title', "Home");
 
     // $this->set('countries', $this->playerDAO->selectAllCountries());
-    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-
-      header('Content-Type: application/json');
-      echo json_encode($players);
-      exit();
-    }
   }
 
   public function programma() {
@@ -60,6 +54,13 @@ class PlayersController extends Controller {
     }else{
       $programmas = $this->playerDAO->search();
       $this->set('name','');
+    }
+
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+
+      header('Content-Type: application/json');
+      echo json_encode($programmas);
+      exit();
     }
     // $programmas = $playerDAO->test();
     $this->set('programmas', $programmas);

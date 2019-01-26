@@ -91,7 +91,7 @@
   flex-flow: column;
 }
 
-.test {
+.checkbox {
   display: flex;
   align-items: center;
   padding-bottom: 1rem;

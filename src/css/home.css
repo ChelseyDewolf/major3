@@ -50,14 +50,17 @@
       #36219a
     );
   color: white;
-
+  background-size: 300% 100%;
   padding: 1rem 5rem;
   border: none;
   border-radius: 2rem;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .2);
+  transition: all ease .3s;
 }
 
 .button:hover {
   cursor: pointer;
+  background-position: 100% 0%;
 }
 
 .slogan-button__container {
@@ -111,12 +114,13 @@
 
 .uitgelicht {
   margin-top: 10rem;
+  height: 100%;
   background-image:
     linear-gradient(
       to right,
       #2dc8c2,
-      #2dc8c2 71.59%,
-      white 71.59%
+      #2dc8c2 110rem,
+      white 110rem
     );
   background-repeat: no-repeat;
 }
@@ -133,8 +137,8 @@
 }
 
 .uitgelicht__bg {
-  height: 50rem;
   width: 100%;
+  padding-bottom: 8rem;
   /* background-image: linear-gradient(to right, #2dc8c2, #2dc8c2 80%, white 80%); */
   /* -webkit-box-shadow: 0 0 69px -4px rgba(0, 0, 0, .75); */
 }
@@ -196,7 +200,7 @@
 }
 
 .gratis {
-  padding: 20rem 0;
+  padding-bottom: 20rem;
 }
 
 .gratis__foto {

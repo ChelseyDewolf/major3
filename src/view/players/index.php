@@ -37,12 +37,12 @@
       <p class="countdown__digit"><strong class="highlight"><span class="remaining-hours"></span></strong> hours</p>
       <p class="countdown__digit"><strong class="highlight"><span class="remaining-minutes"></span></strong> min</p>
     </div>
-  <p class="countdown__title">Strecht your legs, it's almost that time of the year again</p>
+  <p class="countdown__title">Strecht your legs, it's <strong class="highlight">&nbsp;almost&nbsp;</strong> that time of the year again</p>
 </section>
 <section class="about container">
   <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
   <p class="about__text">Dit jaar vindt het jaarlijkse Internationaal Straattheaterfestival terug plaats. <br> Zoals gewoonlijk zijn er terug een tal van activiteiten, voorstellingen, straatacts en nog veel meer. <br>
-  Er zullen dit jaar ook terug activiteiten zijn voor het gehele zin. <br> Meer weten? Bekijk dan zeker onze volledige site!</p>
+  Er zullen dit jaar ook terug activiteiten zijn voor het hele gezin. <br> Meer weten? Bekijk dan zeker onze volledige site!</p>
 </section>
 <section class="uitgelicht">
   <h2 class="hidden">Uitgelicht</h2>
@@ -71,7 +71,7 @@
   </div>
 </section>
 <section class="gratis">
-  <h1 class="hidden">Gratis, voor het gehele gezin</h1>
+  <h1 class="hidden">Gratis, voor het hele gezin</h1>
   <div class="gratis__foto">
     <p class="container"><span class="gratis__foto__titel container">Gratis</span> <br> <span class="gratis__foto__text">Sfeer verzekerd voor het gehele gezin</span> </p>
   </div>
@@ -112,13 +112,13 @@
   <div class="padding-top"></div>
   <div class="padding-bottom"></div>
   <div class="titel uitgelicht__titel">Help jij ook mee?</div>
-  <div class="text vrijwilliger__text">Ons gehele festival wordt georganiseerd door vrijwilligers. <br>
+  <div class="text vrijwilliger__text">Ons hele festival wordt georganiseerd door vrijwilligers. <br>
     Daarom willen wij een warme oproep doen om extra <br>
     vrijwilligers aan te werven. Wil jij meehelpen aan dit fantastische event? <br>
     Schrijf je dan nu in!</div>
   <div class="emaileninput">
     <form action="" class="footer-form">
-    <span class="error"></span>
+    <span class="error zwart"></span>
     <div class="email-container">
       <input class="vrijwilliger__email" type="email" placeholder="E-mail" required>
       <input class="button vrijwilliger__button" type="submit" value="Verstuur">

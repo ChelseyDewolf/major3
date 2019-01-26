@@ -19,9 +19,17 @@
   </nav>
   </div>
   </header>
+  <?php
+        if(!empty($_SESSION['error'])) {
+          echo '<div class="error box">' . $_SESSION['error'] . '</div>';
+        }
+        if(!empty($_SESSION['info'])) {
+          echo '<div class="info box">' . $_SESSION['info'] . '</div>';
+        }
+      ?>
   <section class="programma container">
     <h2 class="hidden">Programma</h2>
-      <form action="index.php">
+      <form action="index.php" class="filter__form">
       <?php
       $checkboxArr=array();
       if(!empty($_GET["genre"]))
@@ -75,50 +83,50 @@
             <div class="filter-checkbox container">
             <legend class="filter-checkbox__titel">Filter</legend>
             <label class="filter-checkbox__label" for="">Type</label>
-              <div class="test"">
+              <div class="checkbox"">
                 <input type="checkbox" name="genre[]" value="voorstelling" <?php if(in_array('voorstelling', $checkboxArr)) echo 'checked'; ?>><span>Voorstelling</span>
               </div>
-              <div class="test">
+              <div class="checkbox">
                 <input type="checkbox" name="genre[]" value="straatact" <?php if(in_array('straatact', $checkboxArr)) echo 'checked'; ?>><span>Straatact</span>
               </div>
-              <div class="test">
+              <div class="checkbox">
                 <input type="checkbox" name="genre[]" value="familie voorstelling" <?php if(in_array('familie voorstelling', $checkboxArr)) echo 'checked'; ?>><span>Familie-act</span>
               </div>
             <label class="filter-checkbox__label" for="">Locatie</label>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="1" <?php if(in_array('1', $checkboxTweeArr)) echo 'checked'; ?>><span>Speelpl. KA/BS de Bever</span>
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="2" <?php if(in_array('2', $checkboxTweeArr)) echo 'checked'; ?>><span>Oud Atletiekplein</span>
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="3" <?php if(in_array('3', $checkboxTweeArr)) echo 'checked'; ?>>Locatie 3
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="4" <?php if(in_array('4', $checkboxTweeArr)) echo 'checked'; ?>>Diedrik Van Beverenlaan
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="5" <?php if(in_array('5', $checkboxTweeArr)) echo 'checked'; ?>>Yzerhand
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>vrasenstraat
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="7" <?php if(in_array('7', $checkboxTweeArr)) echo 'checked'; ?>>Warande
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="8 <?php if(in_array('8', $checkboxTweeArr)) echo 'checked'; ?>">Grote Markt
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="9" <?php if(in_array('9', $checkboxTweeArr)) echo 'checked'; ?>>Locatie 9
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="10" <?php if(in_array('10', $checkboxTweeArr)) echo 'checked'; ?>>Kloosterstraat
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="11" <?php if(in_array('11', $checkboxTweeArr)) echo 'checked'; ?>>Olympisch zwembad
               </div>
-              <div class="test">
+              <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="12" <?php if(in_array('12', $checkboxTweeArr)) echo 'checked'; ?>>Op de straat
               </div>
             <input class="button filter-checkbox__button" type="submit" value="Filter">

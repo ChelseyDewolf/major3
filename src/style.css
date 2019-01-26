@@ -115,3 +115,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
+.zwart {
+  color: black;
+}

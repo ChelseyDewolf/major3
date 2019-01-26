@@ -47,7 +47,7 @@ require('./style.css');
   // --------------- Filter ---------------
 
   const $filterForm = document.querySelector(`.filter__form`),
-    $players = document.querySelector(`.players__list`);
+    $programmas = document.querySelector(`.programma-grid-container`);
 
   const init = () => {
     remainDays();
@@ -65,21 +65,29 @@ require('./style.css');
   };
 
   const handleLoadPlayers = data => {
-    $players.innerHTML = data
-      .map(player => createPlayerListItem(player))
+    $programmas.innerHTML = data
+      .map(programma => createPlayerListItem(programma))
       .join(``);
   };
 
-  const createPlayerListItem = player => {
-    return ` <li class='player'>
-    <img src="${player['Photo'].replace('/4/', '/10/')}" alt="Profile picture ${
-  player['Name']
-}" class="player__pic">
-    <span class='player__name'>${player['Name']}</span>
-    <span class='player__stat'>${player['Age']} ${player['Nationality']}</span>
-    <span class='player__info'>${player['Club']}</span>
-    <span class='player__more'>more</span>
-</li>`;
+  const createPlayerListItem = programma => {
+    return `
+      <a href="index.php?page=detail&amp;id=${programma['id']}">
+      <article class="act-grid-container">
+      <h3 class="hidden">${programma['show_name']}</h3>
+      <div class="act-foto">
+      <img class="foto" src="././assets/img/${programma['pic']}" alt="">
+      </div>
+      <div class="act-tekst">
+        <p class="act-titel">${programma['show_name']}</p>
+        <div class="act-para programma-para">
+        <p>${programma['date']}</p>
+        <p class="act-para__uur">${programma['hour']}</p>
+      </div>
+      </div>
+      </article>
+      </a>
+  `;
   };
 
   const handleSubmitFilterForm = e => {

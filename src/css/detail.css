@@ -1,8 +1,19 @@
+.detail-bg {
+  margin-top: 10rem;
+  background-image:
+    linear-gradient(
+      to right,
+      var(--accent-color) 80rem,
+      white 80rem
+    );
+}
+
 .detail-grid-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: .5fr 3fr 1fr;
   grid-template-areas: 'detail-titel .' 'detail-img detail-para' 'detail-tekst .';
+  padding-bottom: 10rem;
 }
 
 .detail-titel {
@@ -27,9 +38,22 @@
   width: 60rem;
 }
 
+.detail-tekst__social {
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.pad {
+  padding-left: 1rem;
+}
+
 .detail-para {
   grid-area: detail-para;
   display: flex;
+}
+
+.detail-para__fontsize {
+  font-size: 1.8rem;
 }
 
 .website {
@@ -52,8 +76,9 @@
   margin-left: 62rem;
 }
 
-.detail-back__button {
-  background-color: darkgray;
+.test {
+  background-size: 1rem;
+  background-color: black;
   border: none;
   color: white;
   padding: 2rem;
@@ -61,18 +86,10 @@
   text-decoration: none;
   display: inline-block;
   border-radius: 1000rem;
-  opacity: .2;
-}
-
-.detail-back__button a::before {
-  content: '';
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 5rem;
-  border-top: 25px solid transparent;
-  border-right: 50px solid red;
-  border-bottom: 25px solid transparent;
+  background-image: url(../assets/img/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 1.1rem;
 }
 
 .detail-para__locatie {
