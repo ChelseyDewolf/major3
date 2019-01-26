@@ -33,11 +33,11 @@
 <section class="countdown container" id="countdown">
   <h2 class="hidden">Countdown</h2>
     <div class="countdown__digites">
-      <p class="countdown__digit"><span class="highlight"><span class="remaining-days"></span></span> days</p>
-      <p class="countdown__digit"><span class="highlight"><span class="remaining-hours"></span></span> hours</p>
-      <p class="countdown__digit"><span class="highlight"><span class="remaining-minutes"></span></span> min</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-days"></span></strong> days</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-hours"></span></strong> hours</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-minutes"></span></strong> min</p>
     </div>
-  <p class="countdown__title">Strecht your legs, it's <span class="highlight"> almost</span> that time of the year again</p>
+  <p class="countdown__title">Strecht your legs, it's almost that time of the year again</p>
 </section>
 <section class="about container">
   <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
@@ -54,7 +54,7 @@
             ?>
      <a class="act" href="index.php?page=detail&amp;id=<?php echo $act['id'];?>">
       <article class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/stock-foto.jpg" alt=""></div>
+        <div class="act-foto"><img class="foto" src="././assets/img/<?php echo $act['pic'];?>" alt=""></div>
           <div class="act-tekst">
             <h3 class="act-titel"><?php echo $act['show_name'] ?></h3>
             <div class="act-para">
@@ -97,7 +97,7 @@
       8560 Wevelgem</p>
   </div>
   <div class="loactie-ways">
-    <p class="ways">Gebruik ways ter ere van <br> dit event!</p>
+    <p class="ways">Gebruik <strong class="highlight">ways</strong> ter ere van <br> dit event!</p>
     <a href=""><img src="././assets/img/appstore.png" alt=""></a>
     <a href=""><img src="././assets/img/playstore.png" alt=""></a>
   </div>
@@ -117,7 +117,7 @@
     vrijwilligers aan te werven. Wil jij meehelpen aan dit fantastische event? <br>
     Schrijf je dan nu in!</div>
   <div class="emaileninput">
-    <form action="" class="">
+    <form action="" class="footer-form">
     <span class="error"></span>
     <div class="email-container">
       <input class="vrijwilliger__email" type="email" placeholder="E-mail" required>

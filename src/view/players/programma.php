@@ -1,6 +1,6 @@
 <header class="bg">
 <div class="logo-nav__container nav__programma container">
-  <img class="logo" src="././assets/img/logo.png" alt="">
+  <a href="index.php"><img class="logo" src="././assets/img/logo.png" alt=""></a>
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
@@ -22,6 +22,26 @@
   <section class="programma container">
     <h2 class="hidden">Programma</h2>
       <form action="index.php">
+      <?php
+      $checkboxArr=array();
+      if(!empty($_GET["genre"]))
+      {
+          foreach($_GET['genre'] as $eenGenre)
+          {
+              array_push($checkboxArr,$eenGenre);
+          }
+      }
+    ?>
+    <?php
+      $checkboxTweeArr=array();
+      if(!empty($_GET["locatie"]))
+      {
+          foreach($_GET['locatie'] as $eenLocatie)
+          {
+              array_push($checkboxTweeArr,$eenLocatie);
+          }
+      }
+    ?>
         <input type="hidden" name="page" value="programma" />
           <fieldset>
             <div class="radio-toolbar">
@@ -45,62 +65,65 @@
               <div class="filter__search__container">
               <input class="filter__search" type="search" placeholder="Naam voorstelling..." name="search" value="<?php if(!empty($_GET['search'])) {echo $_GET['search'];}?>">
               <div class="filter__button__container">
-              <input class="button filter__button" type="submit">
+              <input class="button filter__button" type="submit" value="Zoek">
               </div>
             </div>
           </fieldset>
           <div class="filter-acts-container">
-          <fieldset>
+          <fieldset class="fieldset">
+            <div class="form-width">
             <div class="filter-checkbox container">
             <legend class="filter-checkbox__titel">Filter</legend>
             <label class="filter-checkbox__label" for="">Type</label>
               <div class="test"">
-                <input type="checkbox" name="genre[]" value="voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'voorstelling') { echo 'checked';}?>><span>Voorstelling</span>
+                <input type="checkbox" name="genre[]" value="voorstelling" <?php if(in_array('voorstelling', $checkboxArr)) echo 'checked'; ?>><span>Voorstelling</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="genre[]" value="straatact" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'straatact') { echo 'checked';}?>><span>Straatact</span>
+                <input type="checkbox" name="genre[]" value="straatact" <?php if(in_array('straatact', $checkboxArr)) echo 'checked'; ?>><span>Straatact</span>
               </div>
               <div class="test">
-                <input type="checkbox" name="genre[]" value="familie voorstelling" <?php if(!empty($_GET['genre']) && $_GET['genre'] == 'familie voorstelling') { echo 'checked';}?>><span>Familie-act</span>
+                <input type="checkbox" name="genre[]" value="familie voorstelling" <?php if(in_array('familie voorstelling', $checkboxArr)) echo 'checked'; ?>><span>Familie-act</span>
               </div>
             <label class="filter-checkbox__label" for="">Locatie</label>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="1" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '1') { echo 'checked';}?>><span>Speelpl. KA/BS de Bever</span>
+            <input type="checkbox" name="locatie[]" value="1" <?php if(in_array('1', $checkboxTweeArr)) echo 'checked'; ?>><span>Speelpl. KA/BS de Bever</span>
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="2" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '2') { echo 'checked';}?>><span>Oud Atletiekplein</span>
+            <input type="checkbox" name="locatie[]" value="2" <?php if(in_array('2', $checkboxTweeArr)) echo 'checked'; ?>><span>Oud Atletiekplein</span>
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="3" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '3') { echo 'checked';}?>>Locatie 3
+            <input type="checkbox" name="locatie[]" value="3" <?php if(in_array('3', $checkboxTweeArr)) echo 'checked'; ?>>Locatie 3
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="4" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '4') { echo 'checked';}?>>Diedrik Van Beverenlaan
+            <input type="checkbox" name="locatie[]" value="4" <?php if(in_array('4', $checkboxTweeArr)) echo 'checked'; ?>>Diedrik Van Beverenlaan
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="5" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '5') { echo 'checked';}?>>Yzerhand
+            <input type="checkbox" name="locatie[]" value="5" <?php if(in_array('5', $checkboxTweeArr)) echo 'checked'; ?>>Yzerhand
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="6" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '6') { echo 'checked';}?>>vrasenstraat
+            <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>vrasenstraat
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="7" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '7') { echo 'checked';}?>>Warande
+            <input type="checkbox" name="locatie[]" value="7" <?php if(in_array('7', $checkboxTweeArr)) echo 'checked'; ?>>Warande
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="8 <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '8') { echo 'checked';}?>">Grote Markt
+            <input type="checkbox" name="locatie[]" value="8 <?php if(in_array('8', $checkboxTweeArr)) echo 'checked'; ?>">Grote Markt
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="9" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '9') { echo 'checked';}?>>Locatie 9
+            <input type="checkbox" name="locatie[]" value="9" <?php if(in_array('9', $checkboxTweeArr)) echo 'checked'; ?>>Locatie 9
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="10" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '10') { echo 'checked';}?>>Kloosterstraat
+            <input type="checkbox" name="locatie[]" value="10" <?php if(in_array('10', $checkboxTweeArr)) echo 'checked'; ?>>Kloosterstraat
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="11" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '11') { echo 'checked';}?>>Olympisch zwembad
+            <input type="checkbox" name="locatie[]" value="11" <?php if(in_array('11', $checkboxTweeArr)) echo 'checked'; ?>>Olympisch zwembad
               </div>
               <div class="test">
-            <input type="checkbox" name="loactie[]" value="12" <?php if(!empty($_GET['locatie']) && $_GET['locatie'] == '12') { echo 'checked';}?>>Op de straat
+            <input type="checkbox" name="locatie[]" value="12" <?php if(in_array('12', $checkboxTweeArr)) echo 'checked'; ?>>Op de straat
               </div>
-            <input class="button filter-checkbox__button" type="submit">
+            <input class="button filter-checkbox__button" type="submit" value="Filter">
+            <a href="index.php?page=programma" class="button  filter-checkbox__button__verwijder">Verwijder Filter</a>
+            </div>
             </div>
           </fieldset>
           <div class="programma-grid-container">
@@ -111,11 +134,11 @@
           <article class="act-grid-container">
           <h3 class="hidden"><?php echo $programma['show_name'];?></h3>
           <div class="act-foto">
-          <img class="foto" src="././assets/img/stock-foto.jpg" alt="">
+          <img class="foto" src="././assets/img/<?php echo $programma['pic'];?>" alt="">
           </div>
           <div class="act-tekst">
             <p class="act-titel"><?php echo $programma['show_name'];?></p>
-            <div class="act-para">
+            <div class="act-para programma-para">
             <p><?php echo $programma["date"];?></p>
             <p class="act-para__uur"><?php echo $programma["hour"];?></p>
           </div>

@@ -164,14 +164,12 @@
 .act-foto {
   grid-area: act-foto;
   font-size: 0;
+  height: 25rem;
 }
 
 .act-tekst {
   grid-area: act-tekst;
   background-color: #1ca09b;
-}
-
-.act-tekst {
   color: white;
   font-size: 1.8rem;
   padding: 0 0 0 2rem;
@@ -325,6 +323,7 @@
 
 .img {
   grid-area: img;
+  margin: auto;
 }
 
 .vrijwilliger__email {

@@ -48,8 +48,13 @@ class PlayersController extends Controller {
       if(!empty($_GET['genre'])){
         $genre = $_GET['genre'];
       }
+      $locatie = '';
+      if(!empty($_GET['locatie'])){
+        $locatie = $_GET['locatie'];
+        var_dump($_GET['locatie']);
+      }
 
-      $programmas = $this->playerDAO->search($search, $dag, $genre);
+      $programmas = $this->playerDAO->search($search, $dag, $genre, $locatie);
 
       // $this->set('nationality',$_GET['nationality']);
     }else{
@@ -67,7 +72,11 @@ class PlayersController extends Controller {
     if (!empty($_GET['id'])) {
       $programmas = $playerDAO->selectById($_GET['id']);
     }
+
+    $randomActs = $playerDAO->randomActs();
+
     $this->set('programmas', $programmas);
+    $this->set('randomActs', $randomActs);
     $this->set('title', "Detail");
   }
 

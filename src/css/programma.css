@@ -1,13 +1,9 @@
 .bg {
   background-image:
-    linear-gradient(
-      to right,
-      #4680d0,
-      #376bc6,
-      #3054ba,
-      #313dab,
-      #36219a
-    );
+    url(../assets/img/nav-image.png),
+    linear-gradient(to right, #313dab, #36219a, #3054ba, #4680d0, #376bc6);
+  background-repeat: no-repeat;
+  background-position: 8% 0%;
 }
 
 .nav__programma {
@@ -62,11 +58,10 @@
   background-color: #f2f2f2;
   border-radius: 10rem;
   border: none;
-  height: 3rem;
+  height: 3.5rem;
   width: 20%;
   padding-left: 1.5rem;
   font-size: 1.5rem;
-  height: 3.5rem;
 }
 
 .filter__search:focus {
@@ -115,6 +110,7 @@
 .filter-checkbox__button {
   margin-top: 2rem;
   width: 12%;
+  text-align: center;
 }
 /*
 .programma-grid {
@@ -182,17 +178,35 @@
   grid-column: 1/1;
 }
 
-.programmatssh {
-  grid-column: 2/2;
-  background-color: var(--primary-color);
-  height: 10vh;
-}
-
 .programma-grid-container {
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: '. . .';
   grid-gap: 2rem;
   padding-bottom: 5rem;
+}
+
+.filter-acts-container {
+  display: flex;
+}
+
+.fieldset {
+  width: 20rem;
+}
+
+.form-width {
+  width: 20rem;
+}
+
+.programma-para {
+  padding-bottom: 1.5rem;
+}
+
+.filter-checkbox__button__verwijder {
+  margin-top: 2rem;
+  width: 12%;
+  text-align: center;
+  padding: 1rem;
 }

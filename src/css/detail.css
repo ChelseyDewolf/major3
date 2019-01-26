@@ -19,10 +19,12 @@
 
 .detail-img {
   grid-area: detail-img;
+  height: 53rem;
 }
 
 .detail-tekst {
   grid-area: detail-tekst;
+  width: 60rem;
 }
 
 .detail-para {
@@ -35,6 +37,7 @@
   text-orientation: mixed;
   font-size: 2rem;
   padding-left: 2rem;
+  color: black;
 }
 
 .datum {
@@ -43,6 +46,10 @@
   padding-top: 46rem;
   padding-left: 4rem;
   font-size: 4rem;
+}
+
+.rechts {
+  margin-left: 62rem;
 }
 
 .detail-back__button {
@@ -54,10 +61,26 @@
   text-decoration: none;
   display: inline-block;
   border-radius: 1000rem;
+  opacity: .2;
+}
+
+.detail-back__button a::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5rem;
+  border-top: 25px solid transparent;
+  border-right: 50px solid red;
+  border-bottom: 25px solid transparent;
 }
 
 .detail-para__locatie {
   padding-left: 2rem;
+}
+
+.gelijkaardige-acts {
+  padding-bottom: 10rem;
 }
 
 .gelijkaardige-acts__titel {
@@ -72,4 +95,55 @@
   justify-content: center;
   margin: 0 auto;
   width: 15%;
+}
+
+.gelijkaardige-grid-container {
+  width: 96rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: '. . .';
+  grid-gap: 2rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.gelijkaardige-act-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: 'act-foto' 'act-tekst';
+}
+
+.gelijkaardige-act-foto {
+  grid-area: act-foto;
+  font-size: 0;
+}
+
+.gelijkaardige-act-tekst {
+  grid-area: act-tekst;
+  background-color: #1ca09b;
+  color: white;
+  font-size: 1.8rem;
+  padding: 0 0 0 2rem;
+}
+
+.gelijkaardige-act-titel {
+  margin-top: 1.5rem;
+}
+
+.gelijkaardige-act-para {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+
+.gelijkaardige-act-para__uur {
+  margin-left: 2rem;
+}
+
+.gelijkaardige-act-tekst:hover {
+  background-color: var(--accent-color);
+}
+
+.gelijkaardige-act-img img:hover {
+  transform: scale(1.2);
 }

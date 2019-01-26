@@ -1,6 +1,6 @@
 <header class="bg">
 <div class="logo-nav__container nav__programma container">
-  <img class="logo" src="././assets/img/logo.png" alt="">
+<a href="index.php"><img class="logo" src="././assets/img/logo.png" alt=""></a>
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
@@ -24,10 +24,9 @@
   <div class="detail-grid-container">
     <h3 class="detail-titel"><a class="detail-back__button" href="index.php?page=programma"></a><span class="detail-titel__span"><?php echo $programmas['show_name'];?></span></h3>
       <div class="detail-img">
-        <div>
-        <p class="datum"><?php echo $programmas['dag'];?></p>
-        <img class="foto" src="././assets/img/stock-foto.jpg" alt="">
-        </div>
+          <p class="datum"><?php echo $programmas['dag'];?></p>
+          <p class="datum rechts"><?php echo $programmas['hour'];?></p>
+        <img class="foto" src="././assets/img/<?php echo $programmas['pic'];?>" alt="">
       </div>
       <div class="detail-tekst">
       <a href=""><img class="" src="././assets/img/facebook-white.png" alt=""></a>
@@ -43,6 +42,26 @@
   </div>
   </section>
   <section class="gelijkaardige-acts container">
-    <h2 class="gelijkaardige-acts__titel"><span class="highlight">Gelijkaardige</span> voorstellingen op dezelfde dag</h2>
+    <h2 class="gelijkaardige-acts__titel">Misschien <strong class="highlight">bevallen</strong> deze acts u beter?</h2>
+    <div class="gelijkaardige-grid-container">
+    <?php
+          foreach($randomActs as $randomAct){
+            ?>
+      <a class="act" href="index.php?page=detail&amp;id=<?php echo $randomAct['id'];?>">
+        <article class="gelijkaardige-act-grid-container">
+          <div class="gelijkaardige-act-foto"><img class="foto" src="././assets/img/<?php echo $randomAct['pic'];?>" alt=""></div>
+            <div class="gelijkaardige-act-tekst">
+              <h3 class="gelijkaardige-act-titel"><?php echo $randomAct['show_name'];?></h3>
+              <div class="gelijkaardige-act-para">
+                <p><?php echo $randomAct['date'];?></p>
+                <p class="gelijkaardige-act-para__uur"><?php echo $randomAct['hour'];?></p>
+            </div>
+          </div>
+        </article>
+      </a>
+      <?php
+        }
+      ?>
+    </div>
     <a class="button gelijkaardige-acts__button" href="index.php?page=programma">Programma</a>
   </section>

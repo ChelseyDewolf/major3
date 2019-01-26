@@ -34,6 +34,27 @@ class PlayerDAO extends DAO {
       // $sql .= " )";
     }
 
+    if (!empty($locatie) && is_array($locatie))  {
+
+
+      // `genre` IN ('Voorstelling', 'Straatact')
+      // AND `genre` IN (:genre0, :genre1, :genre2)
+      $inSqlTwee = '';
+      foreach ($locatie as $index => $locatieEnkel) {
+        if ($index > 0) {
+          $inSqlTwee .= ", ";
+        }
+        $inSqlTwee .= ":locatie" . $index;
+      }
+
+      $sql .= " AND `location_id` IN (" . $inSqlTwee . ")";
+      // foreach ($genre as $genreEnkel) {
+        // $sql .= " AND `genre` LIKE :genre0 OR `genre` LIKE :genre01 `genre` LIKE :genre02";
+      // }
+      // $sql .= " )";
+    }
+
+
 
 
     $sql .= " ORDER BY `show_name` DESC";
@@ -50,6 +71,12 @@ class PlayerDAO extends DAO {
     if (!empty($genre)) {
       foreach ($genre as $index => $genreEnkel) {
         $stmt->bindValue(":genre" . $index, $genreEnkel);
+      }
+    }
+
+    if (!empty($locatie)) {
+      foreach ($locatie as $index => $locatieEnkel) {
+        $stmt->bindValue(":locatie" . $index, $locatieEnkel);
       }
     }
     // if (!empty($nationality)) {
@@ -97,5 +124,15 @@ class PlayerDAO extends DAO {
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public function randomActs($limit = 3){
+    $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` ORDER BY RAND() LIMIT :limit";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':limit', $limit);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+
 
 }
