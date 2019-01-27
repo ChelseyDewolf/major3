@@ -20,8 +20,8 @@
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="#">Home</a>
-          <a href="#">Programma</a>
+          <a href="index.php?">Home</a>
+          <a href="index.php?page=programma">Programma</a>
           <a href="#">Praktisch</a>
           <a href="#">Contact</a>
         </div>
@@ -149,6 +149,31 @@
 </section>
 <section class="vrijwilliger container">
   <h2 class="hidden">Schrijf je in als vrijwilliger</h2>
+
+
+
+  <div class="responsive-grid-container">
+  <div class="responsive-titel uitgelicht__titel">Help jij ook mee?</div>
+  <div class="responsive-text vrijwilliger__text">Ons hele festival wordt georganiseerd door vrijwilligers. <br>
+    Daarom willen wij een warme oproep doen om extra <br>
+    vrijwilligers aan te werven. Wil jij meehelpen aan dit fantastische event? <br>
+    Schrijf je dan nu in!</div>
+  <div class="responsive-emaileninput">
+    <form action="" class="footer-form">
+    <span class="error zwart"></span>
+    <div class="responsive-email-container">
+      <input class="responsive-vrijwilliger__email" type="email" placeholder="E-mail" required>
+      <input class="button responsive-vrijwilliger__button" type="submit" value="Verstuur">
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+
+
+
   <div class="grid-container">
   <div class="padding-top"></div>
   <div class="padding-bottom"></div>

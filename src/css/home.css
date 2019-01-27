@@ -488,6 +488,10 @@
   justify-content: flex-end;
   margin-top: -22rem;
   padding-bottom: 20rem;
+
+  @media (--lg) {
+    padding-bottom: 0;
+  }
 }
 
 .locatie-design__img {
@@ -545,11 +549,15 @@
   /* xy/h w */
   margin: 0 auto;
   width: 100%;
-  display: grid;
+  display: none;
   grid-template-columns: 5rem 2fr 1fr 5rem;
   grid-template-rows: 5rem 1fr 1fr 1fr 5rem;
   grid-template-areas: 'padding-top padding-top padding-top padding-top' '. titel img .' '. text img .' '. emaileninput img .' 'padding-bottom padding-bottom padding-bottom padding-bottom';
   background-color: var(--accent-color);
+
+  @media (--md) {
+    display: grid;
+  }
 
   @media (--lg) {
     width: 90rem;
@@ -595,7 +603,7 @@
   border-radius: 10rem;
   border: none;
   height: 3.5rem;
-  width: 40%;
+  width: 22rem;
   padding-left: 1.5rem;
   font-size: 1.5rem;
 }
@@ -611,6 +619,45 @@
 }
 
 .vrijwilliger__button {
-  width: 30%;
+  width: 15rem;
   margin-top: 1rem;
+}
+
+.responsive-grid-container {
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @media (--md) {
+    display: none;
+  }
+}
+
+.responsive-email-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.responsive-vrijwilliger__email {
+  border-radius: 10rem;
+  border: none;
+  height: 3.5rem;
+  width: 22rem;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.responsive-vrijwilliger__button {
+  width: 18rem;
+  margin-top: 1rem;
+  align-content: center;
+}
+
+.responsive-text {
+  padding: 2rem;
 }

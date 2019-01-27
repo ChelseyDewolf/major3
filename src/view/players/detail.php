@@ -16,10 +16,21 @@
         <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.php?">Home</a>
+          <a href="index.php?page=programma">Programma</a>
+          <a href="#">Praktisch</a>
+          <a href="#">Contact</a>
+        </div>
+  </div>
+<span class="testje" onclick="openNav()">Menu &#9776;</span>
   </nav>
   </div>
   </header>
-  <section class="detail container">
+  <section class="detail">
+    <div class="container">
     <h2 class="hidden">Detail</h2>
   <div class="detail-grid-container">
     <h3 class="detail-titel">
@@ -28,7 +39,7 @@
       <div class="detail-img">
           <p class="datum"><?php echo $programmas['dag'];?></p>
           <p class="datum rechts"><?php echo $programmas['hour'];?></p>
-        <img class="foto" src="././assets/img/<?php echo $programmas['pic'];?>" alt="">
+        <img class="foto foto-twee" src="././assets/img/<?php echo $programmas['pic'];?>" alt="">
       </div>
       <div class="detail-tekst">
       <div class="detail-tekst__social">
@@ -36,19 +47,21 @@
       <a href=""><img class="pad" src="././assets/img/twitter.png" alt=""></a>
       <a href=""><img class="pad" src="././assets/img/instagram.png" alt=""></a>
       </div>
+        <p class="data">Locatie: <br><?php echo $programmas['location_name'];?></p>
+        <a class="data-twee"><?php echo $programmas['site'];?></a>
         <p><?php echo $programmas['info'];?></p>
       </div>
       <div class="detail-para">
         <a class="website" href="https:/<?php echo $programmas['site'];?>"><?php echo $programmas['site'];?></a>
-        <p class="detail-para__locatie">Locatie: <br>
-        <span class="detail-para__fontsize"><?php echo $programmas['location_name'];?></span></p>
+        <p class="detail-para__locatie gelijkaardige-act-date-grid">Locatie: <br>
+        <span class="detail-para__fontsize gelijkaardige-act-date-grid"><?php echo $programmas['location_name'];?></span></p>
       </div>
       <?php
           if($programmas['showid'] == '18' || $programmas['showid'] == '1') {
             ?>
               </div>
-              <div class="extra-content-grid-container">
               <div class="extra-content-grid-tekst"><p><?php echo $programmas['extra_info'];?></p></div>
+              <div class="extra-content-grid-container">
               <div class="extra-content-foto-een extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_een'];?>" alt=""></div>
               <div class="extra-content-foto-twee extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_twee'];?>" alt=""></div>
               <div class="extra-content-foto-drie extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_drie'];?>" alt=""></div>
@@ -56,9 +69,10 @@
             <?php
         }
       ?>
+      </div>
   </section>
    <section class="gelijkaardige-acts container">
-    <h2 class="gelijkaardige-acts__titel">Misschien <strong class="highlight">&nbsp;bevallen&nbsp;</strong> deze acts u beter?</h2>
+    <h2 class="gelijkaardige-acts__titel">Misschien bevallen deze acts u beter?</h2>
     <div class="gelijkaardige-grid-container">
     <?php
           foreach($randomActs as $randomAct){
@@ -69,7 +83,7 @@
             <div class="gelijkaardige-act-tekst">
               <h3 class="gelijkaardige-act-titel"><?php echo $randomAct['show_name'];?></h3>
               <div class="gelijkaardige-act-para">
-                <p><?php echo $randomAct['date'];?></p>
+                <p class=""><?php echo $randomAct['date'];?></p>
                 <p class="gelijkaardige-act-para__uur"><?php echo $randomAct['hour'];?></p>
             </div>
           </div>
@@ -81,3 +95,12 @@
     </div>
     <a class="button gelijkaardige-acts__button" href="index.php?page=programma">Programma</a>
   </section>
+
+  <script>
+ function openNav() {
+    document.getElementById('myNav').style.width = '100%';
+  }
+
+  function closeNav() {
+    document.getElementById('myNav').style.width = '0%';
+  }</script>
