@@ -45,7 +45,6 @@ class PlayersController extends Controller {
       $locatie = '';
       if(!empty($_GET['locatie'])){
         $locatie = $_GET['locatie'];
-        var_dump($_GET['locatie']);
       }
 
       $programmas = $this->playerDAO->search($search, $dag, $genre, $locatie);

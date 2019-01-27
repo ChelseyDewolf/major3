@@ -57,7 +57,7 @@ class PlayerDAO extends DAO {
 
 
 
-    $sql .= " ORDER BY `show_name` DESC";
+    $sql .= " ORDER BY `show_name` ASC";
 
     $stmt = $this->pdo->prepare($sql);
     if (!empty($name)) {
