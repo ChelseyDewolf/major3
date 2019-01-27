@@ -14,6 +14,12 @@
   --white: white;
 }
 
+@custom-media --xs screen and (min-width: 0);
+@custom-media --xm screen and (min-width: 20em);
+@custom-media --md screen and (min-width: 48em);
+@custom-media --lg screen and (min-width: 64em);
+@custom-media --xl screen and (min-width: 90em);
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -46,8 +52,22 @@ a {
 }
 
 .container {
-  width: 120rem;
-  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (--md) {
+    max-width: 76.8rem;
+  }
+
+  @media (--lg) {
+    max-width: 100rem;
+  }
+
+  @media (--xl) {
+    max-width: 120rem;
+  }
 }
 
 .highlight {
@@ -64,7 +84,11 @@ a {
 }
 
 .footer__form {
-  padding: 5rem 0;
+  padding: 2rem 0;
+
+  @media (--md) {
+    padding: 5rem 0;
+  }
 }
 
 .footer__label {
@@ -76,9 +100,13 @@ a {
   border-radius: 10rem;
   border: none;
   height: 3rem;
-  width: 80%;
+  width: 22rem;
   padding-left: 1.5rem;
   font-size: 1.5rem;
+
+  @media (--md) {
+    width: 80%;
+  }
 }
 
 .footer__email:focus {
@@ -92,18 +120,26 @@ a {
 
 .footer__button {
   margin-top: 1.5rem;
-  width: 60%;
+  width: 17rem;
+
+  @media (--md) {
+    width: 60%;
+  }
 }
 
 .social-media {
-  display: flex;
-  flex-flow: column;
+  @media (--md) {
+    display: flex;
+    flex-flow: column;
+  }
 }
 
 .footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media (--md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__after {

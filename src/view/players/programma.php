@@ -4,16 +4,16 @@
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
-        <a href="index.php">Home</a>
+        <a class="navigation__list__item__a" href="index.php">Home</a>
       </li>
       <li class="navigation__list__item">
-        <a href="index.php?page=programma">Programma</a>
+        <a class="navigation__list__item__a" href="index.php?page=programma">Programma</a>
       </li>
       <li class="navigation__list__item">
-        <a href="">Praktisch</a>
+        <a class="navigation__list__item__a" href="">Praktisch</a>
       </li>
       <li class="navigation__list__item">
-        <a href="">Contact</a>
+        <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
   </nav>

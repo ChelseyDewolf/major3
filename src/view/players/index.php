@@ -5,20 +5,31 @@
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
-        <a href="index.php">Home</a>
+        <a class="navigation__list__item__a" href="index.php">Home</a>
       </li>
       <li class="navigation__list__item">
-        <a href="index.php?page=programma">Programma</a>
+        <a class="navigation__list__item__a" href="index.php?page=programma">Programma</a>
       </li>
       <li class="navigation__list__item">
-        <a href="">Praktisch</a>
+        <a class="navigation__list__item__a" href="">Praktisch</a>
       </li>
       <li class="navigation__list__item">
-        <a href="">Contact</a>
+        <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#">Home</a>
+          <a href="#">Programma</a>
+          <a href="#">Praktisch</a>
+          <a href="#">Contact</a>
+        </div>
+  </div>
+<span class="testje" onclick="openNav()">Menu &#9776;</span>
   </nav>
   </div>
+  <div class="header-content__responsive">
     <div class="container slogan-button__container">
       <p class="slogan">Internationaal <br> Straattheaterfestival <br> Beveren</p>
       <a href="#countdown" class="button">Ontdek</a>
@@ -29,15 +40,19 @@
   <div class="header__date container">
     <p>AUG <br> 24 - 25 - 26</p>
   </div>
+  </div>
 </header>
 <section class="countdown container" id="countdown">
   <h2 class="hidden">Countdown</h2>
     <div class="countdown__digites">
-      <p class="countdown__digit"><strong class="highlight"><span class="remaining-days"></span></strong> days</p>
-      <p class="countdown__digit"><strong class="highlight"><span class="remaining-hours"></span></strong> hours</p>
-      <p class="countdown__digit"><strong class="highlight"><span class="remaining-minutes"></span></strong> min</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-days"></span></strong><span class="countdown__para">days</span></p>
+      <p class="countdown__digit__punt">:</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-hours"></span></strong><span class="countdown__para">hours</span></p>
+      <p class="countdown__digit__punt">:</p>
+      <p class="countdown__digit"><strong class="highlight"><span class="remaining-minutes"></span></strong><span class="countdown__para">min</span></p>
     </div>
-  <p class="countdown__title">Strecht your legs, it's <strong class="highlight">&nbsp;almost&nbsp;</strong> that time of the year again</p>
+    <div class="border"></div>
+  <p class="countdown__title">Strecht your legs, it's &nbsp;almost&nbsp; that time of the year again</p>
 </section>
 <section class="about container">
   <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
@@ -78,6 +93,32 @@
 </section>
 <section class="hoofdlocaties container">
   <h2 class="hidden">Hoofdlocaties</h2>
+
+
+
+  <div class="responsive-locatie-grid-container">
+    <div class="responsive-locatie-titel uitgelicht__titel">Hoofdlocaties</div>
+    <div class="responsive-locatie-adress">
+    <div class="responsive-locatie">
+      <p>Locatie 1 <br>
+        Kolverikstraat 31 <br>
+        8560 Wevelgem</p>
+      </div>
+      <p class="responsive-locatie-een">Locatie 2 <br>
+        Kolverikstraat 31 <br>
+        8560 Wevelgem</p>
+    </div>
+    <div class="responsive-loactie-ways">
+      <p class="responsive-ways">Gebruik <strong class="highlight">ways</strong> ter ere van <br> dit event!</p>
+      <a class="responsive-ways__img" href=""><img src="././assets/img/appstore.png" alt=""></a>
+      <a href=""><img src="././assets/img/playstore.png" alt=""></a>
+    </div>
+  </div>
+
+
+
+
+
   <div class="locatie-grid-container">
   <div class="locatie-foto">
     <img class="locatie-foto__img" src="././assets/img/kaart.png" alt="">
@@ -103,7 +144,7 @@
   </div>
 </div>
   <div class="locatie-design">
-    <img src="././assets/img/twee-design.png" alt="">
+    <img class="locatie-design__img" src="././assets/img/twee-design.png" alt="">
   </div>
 </section>
 <section class="vrijwilliger container">
@@ -130,5 +171,14 @@
 </div>
 
 </section>
+
+<script>
+ function openNav() {
+    document.getElementById('myNav').style.width = '100%';
+  }
+
+  function closeNav() {
+    document.getElementById('myNav').style.width = '0%';
+  }</script>
 
 
