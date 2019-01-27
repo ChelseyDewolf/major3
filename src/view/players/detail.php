@@ -43,9 +43,21 @@
         <p class="detail-para__locatie">Locatie: <br>
         <span class="detail-para__fontsize"><?php echo $programmas['location_name'];?></span></p>
       </div>
-  </div>
+      <?php
+          if($programmas['showid'] == '18' || $programmas['showid'] == '1') {
+            ?>
+              </div>
+              <div class="extra-content-grid-container">
+              <div class="extra-content-grid-tekst"><p><?php echo $programmas['extra_info'];?></p></div>
+              <div class="extra-content-foto-een extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_een'];?>" alt=""></div>
+              <div class="extra-content-foto-twee extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_twee'];?>" alt=""></div>
+              <div class="extra-content-foto-drie extra"><img class="extra_img" src="././assets/img/<?php echo $programmas['extra_pic_drie'];?>" alt=""></div>
+            </div>
+            <?php
+        }
+      ?>
   </section>
-  <section class="gelijkaardige-acts container">
+   <section class="gelijkaardige-acts container">
     <h2 class="gelijkaardige-acts__titel">Misschien <strong class="highlight">&nbsp;bevallen&nbsp;</strong> deze acts u beter?</h2>
     <div class="gelijkaardige-grid-container">
     <?php

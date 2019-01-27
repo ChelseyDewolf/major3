@@ -94,7 +94,7 @@ class PlayerDAO extends DAO {
   // }
 
   public function selectById($id){
-    $sql = "SELECT shows.id as showid, shows.show_name, shows.genre, program.id as programid, shows.info, shows.pic, program.date as dag, program.start as hour, program.location_id, artists.site, locations.location_name
+    $sql = "SELECT shows.id as showid, shows.show_name, shows.genre, program.id as programid, shows.info, shows.pic, shows.extra_pic_een, shows.extra_pic_twee, shows.extra_pic_drie, shows.extra_info, program.date as dag, program.start as hour, program.location_id, artists.site, locations.location_name
     FROM `shows`
     INNER JOIN `program`
     ON `shows`.`id` = `program`.`show_id`
