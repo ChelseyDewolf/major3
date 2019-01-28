@@ -1,19 +1,19 @@
 <header class="header">
-  <h1><span class="hidden">Internationaal Straattheater Beveren</span></h1>
+  <h1><span aria-hidden="true" class="hidden">Internationaal Straattheater Beveren</span></h1>
   <div class="logo-nav__container container">
   <img class="logo" src="././assets/img/logo.png" alt="Logo">
   <nav class="navigation">
     <ul class="navigation__list">
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php">Home</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php?page=programma">Programma</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Praktisch</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
@@ -43,7 +43,7 @@
   </div>
 </header>
 <section class="countdown container" id="countdown">
-  <h2 class="hidden">Countdown</h2>
+  <h2 aria-hidden="true" class="hidden">Countdown</h2>
     <div class="countdown__digites">
       <p class="countdown__digit"><strong class="highlight"><span class="remaining-days"></span></strong><span class="countdown__para">days</span></p>
       <p class="countdown__digit__punt">:</p>
@@ -55,12 +55,12 @@
   <p class="countdown__title">Strecht your legs, it's almost that time of the year again</p>
 </section>
 <section class="about container">
-  <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
+  <h2 aria-hidden="true" class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
   <p class="about__text">Dit jaar vindt het jaarlijkse Internationaal Straattheaterfestival terug plaats. <br> Zoals gewoonlijk zijn er terug een tal van activiteiten, voorstellingen, straatacts en nog veel meer. <br>
   Er zullen dit jaar ook terug activiteiten zijn voor het hele gezin. <br> Meer weten? Bekijk dan zeker onze volledige site!</p>
 </section>
 <section class="uitgelicht">
-  <h2 class="hidden">Uitgelicht</h2>
+  <h2 aria-hidden="true" class="hidden">Uitgelicht</h2>
   <p class="uitgelicht__titel container">Uitgelicht</p>
   <div class="uitgelicht__bg container">
     <div class="uitgelicht-grid-container">
@@ -89,13 +89,13 @@
     </div>
 </section>
 <section class="gratis">
-  <h1 class="hidden">Gratis, voor het hele gezin</h1>
+  <h1 aria-hidden="true" class="hidden">Gratis, voor het hele gezin</h1>
   <div class="gratis__foto">
     <p class="container"><span class="gratis__foto__titel container">Gratis</span> <br> <span class="gratis__foto__text">Sfeer verzekerd voor het gehele gezin</span> </p>
   </div>
 </section>
 <section class="hoofdlocaties container">
-  <h2 class="hidden">Hoofdlocaties</h2>
+  <h2 aria-hidden="true" class="hidden">Hoofdlocaties</h2>
 
   <div class="responsive-locatie-grid-container">
     <div class="responsive-locatie-titel uitgelicht__titel">Hoofdlocaties</div>
@@ -145,7 +145,7 @@
   </div>
 </section>
 <section class="vrijwilliger container">
-  <h2 class="hidden">Schrijf je in als vrijwilliger</h2>
+  <h2 aria-hidden="true" class="hidden">Schrijf je in als vrijwilliger</h2>
 
   <div class="responsive-grid-container">
   <div class="responsive-titel uitgelicht__titel">Help jij ook mee?</div>

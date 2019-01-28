@@ -99,6 +99,20 @@
   padding: 1rem;
 }
 
+.navigation__list__item::after {
+  content: '';
+  display: block;
+  background-color: white;
+  height: .3rem;
+  width: 0;
+  bottom: -.5rem;
+  transition: all ease .3s;
+}
+
+.navigation__list__item:hover::after {
+  width: 100%;
+}
+
 .navigation__list__item__a {
   font-size: 1.5rem;
   text-decoration: none;

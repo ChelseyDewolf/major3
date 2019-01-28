@@ -3,16 +3,16 @@
 <a href="index.php"><img class="logo" src="././assets/img/logo.png" alt="Logo"></a>
   <nav class="navigation">
     <ul class="navigation__list">
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php">Home</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php?page=programma">Programma</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Praktisch</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
@@ -31,7 +31,7 @@
   </header>
   <section class="detail">
     <div class="container">
-    <h2 class="hidden">Detail</h2>
+    <h2 aria-hidden="true" class="hidden">Detail</h2>
   <div class="detail-grid-container">
     <h3 class="detail-titel">
       <a class="detail-back__button" href="index.php?page=programma"><div class="test"></div></a>

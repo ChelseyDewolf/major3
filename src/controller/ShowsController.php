@@ -1,21 +1,21 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
-require_once __DIR__ . '/../dao/PlayerDAO.php';
+require_once __DIR__ . '/../dao/ShowDAO.php';
 
-class PlayersController extends Controller {
+class ShowsController extends Controller {
 
   private $todoDAO;
 
   function __construct() {
-    $this->playerDAO = new PlayerDAO();
+    $this->showDAO = new ShowDAO();
   }
 
   public function index() {
 
-    $playerDAO = new PlayerDAO();
+    $showDAO = new ShowDAO();
 
-      $acts = $playerDAO->uitgelicht();
+      $acts = $showDAO->uitgelicht();
 
       $this->set('acts', $acts);
 
@@ -24,7 +24,7 @@ class PlayersController extends Controller {
   }
 
   public function programma() {
-    $playerDAO = new PlayerDAO();
+    $showDAO = new ShowDAO();
     if (!empty($_GET['page']) && $_GET['page'] == 'programma') {
       $search = '';
       if(!empty($_GET['search'])){
@@ -43,10 +43,10 @@ class PlayersController extends Controller {
         $locatie = $_GET['locatie'];
       }
 
-      $programmas = $this->playerDAO->search($search, $dag, $genre, $locatie);
+      $programmas = $this->showDAO->search($search, $dag, $genre, $locatie);
 
     }else{
-      $programmas = $this->playerDAO->search();
+      $programmas = $this->showDAO->search();
       $this->set('name','');
     }
 
@@ -63,12 +63,12 @@ class PlayersController extends Controller {
 
   public function detail() {
 
-    $playerDAO = new PlayerDAO();
+    $showDAO = new ShowDAO();
     if (!empty($_GET['id'])) {
-      $programmas = $playerDAO->selectById($_GET['id']);
+      $programmas = $showDAO->selectById($_GET['id']);
     }
 
-    $randomActs = $playerDAO->randomActs();
+    $randomActs = $showDAO->randomActs();
 
     $this->set('programmas', $programmas);
     $this->set('randomActs', $randomActs);

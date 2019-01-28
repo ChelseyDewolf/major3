@@ -3,16 +3,16 @@
   <a href="index.php"><img class="logo" src="././assets/img/logo.png" alt="Logo"></a>
   <nav class="navigation">
     <ul class="navigation__list">
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php">Home</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="index.php?page=programma">Programma</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Praktisch</a>
       </li>
-      <li class="navigation__list__item">
+      <li role="menuitem" class="navigation__list__item">
         <a class="navigation__list__item__a" href="">Contact</a>
       </li>
     </ul>
@@ -38,7 +38,7 @@
         }
       ?>
   <section class="programma container">
-    <h2 class="hidden">Programma</h2>
+    <h2 aria-hidden="true" class="hidden">Programma</h2>
       <form action="index.php" class="filter__form">
       <?php
       $checkboxArr=array();
@@ -60,7 +60,7 @@
           }
       }
     ?>
-        <input type="hidden" name="page" value="programma" />
+        <input aria-hidden="true" type="hidden" name="page" value="programma" />
           <div class="responsive-fieldset">
             <div class="radio-toolbar scrolling-wrapper">
               <div class="radio-toolbar__container card">
@@ -184,7 +184,7 @@
             <input type="checkbox" name="locatie[]" value="5" <?php if(in_array('5', $checkboxTweeArr)) echo 'checked'; ?>>Yzerhand
               </div>
               <div class="checkbox">
-            <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>vrasenstraat
+            <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>Vrasenstraat
               </div>
               <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="7" <?php if(in_array('7', $checkboxTweeArr)) echo 'checked'; ?>>Warande
@@ -218,7 +218,7 @@
             ?>
               <a href="index.php?page=detail&amp;id=<?php echo $programma['id'];?>">
               <article class="programma-act-grid-container">
-              <h3 class="hidden"><?php echo $programma['show_name'];?></h3>
+              <h3 aria-hidden="true" class="hidden"><?php echo $programma['show_name'];?></h3>
               <div class="programma-act-foto">
               <img class="foto" src="././assets/img/<?php echo $programma['pic'];?>" alt="Foto van de act '<?php echo $programma['pic'];?>'">
               </div>

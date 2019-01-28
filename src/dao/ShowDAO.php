@@ -2,7 +2,7 @@
 
 require_once( __DIR__ . '/DAO.php');
 
-class PlayerDAO extends DAO {
+class ShowDAO extends DAO {
 
   public function search($name = '', $day = '', $genre = [], $locatie = []){
     $sql = "SELECT shows.id, shows.show_name, shows.info, shows.genre, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour, program.location_id FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id`  WHERE 1";
