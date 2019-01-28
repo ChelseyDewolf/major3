@@ -61,7 +61,7 @@
       }
     ?>
         <input type="hidden" name="page" value="programma" />
-          <fieldset class="responsive-fieldset">
+          <div class="responsive-fieldset">
             <div class="radio-toolbar scrolling-wrapper">
               <div class="radio-toolbar__container card">
                 <input type="radio" id="alle" name="dag" value="" checked>
@@ -80,14 +80,16 @@
                 <label for="zondag">Zondag 26/08</label>
               </div>
                 </div>
-              <!-- <div class="filter__search__container">
+              <div class="filter__search__container">
               <input class="filter__search" type="search" placeholder="Naam voorstelling..." name="search" value="<?php if(!empty($_GET['search'])) {echo $_GET['search'];}?>">
               <div class="filter__button__container">
               <input class="button filter__button" type="submit" value="Zoek">
-              <span class="button button-responsive" onclick="openFilter()">Open Filter</span>
-              </div> -->
+              </div>
             </div>
-          </fieldset>
+              <div class="button-responsive-container">
+               <span class="button button-responsive" onclick="openFilter()">Open Filter</span>
+              </div>
+          </div>
           <div class="filter-acts-container">
           <div id="myFilter" class="filter-overlay">
             <a href="javascript:void(0)" class="closebtn filter-overlay-exit" onclick="closeFilter()">&times;</a>
@@ -239,7 +241,7 @@
   </section>
   <script>
  function openFilter() {
-    document.getElementById('myFilter').style.width = '50%';
+    document.getElementById('myFilter').style.width = '32rem';
   }
 
   function closeFilter() {
