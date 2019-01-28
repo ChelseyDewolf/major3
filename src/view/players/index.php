@@ -1,7 +1,7 @@
 <header class="header">
   <h1><span class="hidden">Internationaal Straattheater Beveren</span></h1>
   <div class="logo-nav__container container">
-  <img class="logo" src="././assets/img/logo.png" alt="">
+  <img class="logo" src="././assets/img/logo.png" alt="Logo">
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
@@ -18,7 +18,7 @@
       </li>
     </ul>
       <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn"">&times;</a>
         <div class="overlay-content">
           <a href="index.php?">Home</a>
           <a href="index.php?page=programma">Programma</a>
@@ -26,7 +26,7 @@
           <a href="#">Contact</a>
         </div>
   </div>
-<span class="testje" onclick="openNav()">Menu &#9776;</span>
+<span class="testje">Menu &#9776;</span>
   </nav>
   </div>
   <div class="header-content__responsive">
@@ -35,7 +35,7 @@
       <a href="#countdown" class="button">Ontdek</a>
     </div>
   <div class="header__design-element container">
-    <img src="././assets/img/design-element.png" alt="">
+    <img src="././assets/img/design-element.png" alt="Desing element">
   </div>
   <div class="header__date container">
     <p>AUG <br> 24 - 25 - 26</p>
@@ -52,7 +52,7 @@
       <p class="countdown__digit"><strong class="highlight"><span class="remaining-minutes"></span></strong><span class="countdown__para">min</span></p>
     </div>
     <div class="border"></div>
-  <p class="countdown__title">Strecht your legs, it's &nbsp;almost&nbsp; that time of the year again</p>
+  <p class="countdown__title">Strecht your legs, it's almost that time of the year again</p>
 </section>
 <section class="about container">
   <h2 class="hidden">Wat is het Internationaal Straattheaterfestival?</h2>
@@ -69,7 +69,7 @@
             ?>
      <a class="act" href="index.php?page=detail&amp;id=<?php echo $act['id'];?>">
       <article class="act-grid-container">
-        <div class="act-foto"><img class="foto" src="././assets/img/<?php echo $act['pic'];?>" alt=""></div>
+        <div class="act-foto"><img class="foto" src="././assets/img/<?php echo $act['pic'];?>" alt="Afbeelding van de act '<?php echo $act['pic'];?>'"></div>
           <div class="act-tekst">
             <h3 class="act-titel"><?php echo $act['show_name'] ?></h3>
             <div class="act-para">
@@ -84,6 +84,9 @@
            ?>
     </div>
   </div>
+  <div class="uitgelicht-button">
+    <a href="index.php?page=programma" class="button">Programma</a>
+    </div>
 </section>
 <section class="gratis">
   <h1 class="hidden">Gratis, voor het hele gezin</h1>
@@ -94,34 +97,28 @@
 <section class="hoofdlocaties container">
   <h2 class="hidden">Hoofdlocaties</h2>
 
-
-
   <div class="responsive-locatie-grid-container">
     <div class="responsive-locatie-titel uitgelicht__titel">Hoofdlocaties</div>
     <div class="responsive-locatie-adress">
     <div class="responsive-locatie">
       <p>Locatie 1 <br>
-        Kolverikstraat 31 <br>
-        8560 Wevelgem</p>
+        Donkvijverstraat 30 <br>
+        9120 Bevern</p>
       </div>
       <p class="responsive-locatie-een">Locatie 2 <br>
-        Kolverikstraat 31 <br>
-        8560 Wevelgem</p>
+        Diedrik Van Bevernlaan <br>
+        9120 Beveren</p>
     </div>
     <div class="responsive-loactie-ways">
       <p class="responsive-ways">Gebruik <strong class="highlight">ways</strong> ter ere van <br> dit event!</p>
-      <a class="responsive-ways__img" href=""><img src="././assets/img/appstore.png" alt=""></a>
-      <a href=""><img src="././assets/img/playstore.png" alt=""></a>
+      <a class="responsive-ways__img" href=""><img src="././assets/img/appstore.png" alt="Link naar de Appstore"></a>
+      <a href=""><img src="././assets/img/playstore.png" alt="Link naar de Playstore"></a>
     </div>
   </div>
 
-
-
-
-
   <div class="locatie-grid-container">
   <div class="locatie-foto">
-    <img class="locatie-foto__img" src="././assets/img/kaart.png" alt="">
+    <img class="locatie-foto__img" src="././assets/img/kaart.png" alt="Detailkaart van het centrum van Beveren">
   </div>
   <div class="locatie-padding"></div>
   <div class="locatie-padding-top"></div>
@@ -130,27 +127,25 @@
   <div class="locatie-adress">
    <div class="locatie">
     <p>Locatie 1 <br>
-      Kolverikstraat 31 <br>
-      8560 Wevelgem</p>
+      Donkvijverstraat 30 <br>
+      9120 Bevern</p>
     </div>
     <p>Locatie 2 <br>
-      Kolverikstraat 31 <br>
-      8560 Wevelgem</p>
+      Diedrik Van Bevernlaan <br>
+      9120 Beveren
   </div>
   <div class="loactie-ways">
     <p class="ways">Gebruik <strong class="highlight">ways</strong> ter ere van <br> dit event!</p>
-    <a href=""><img src="././assets/img/appstore.png" alt=""></a>
-    <a href=""><img src="././assets/img/playstore.png" alt=""></a>
+    <a href=""><img src="././assets/img/appstore.png" alt="Link naar de Appstore"></a>
+    <a href=""><img src="././assets/img/playstore.png" alt="Link naar de Playstore"></a>
   </div>
 </div>
   <div class="locatie-design">
-    <img class="locatie-design__img" src="././assets/img/twee-design.png" alt="">
+    <img class="locatie-design__img" src="././assets/img/twee-design.png" alt="Etra design element">
   </div>
 </section>
 <section class="vrijwilliger container">
   <h2 class="hidden">Schrijf je in als vrijwilliger</h2>
-
-
 
   <div class="responsive-grid-container">
   <div class="responsive-titel uitgelicht__titel">Help jij ook mee?</div>
@@ -170,10 +165,6 @@
 </div>
 </div>
 
-
-
-
-
   <div class="grid-container">
   <div class="padding-top"></div>
   <div class="padding-bottom"></div>
@@ -191,19 +182,10 @@
       </div>
     </form>
   </div>
-  <div class="img"><img src="././assets/img/volunteer.png" alt=""></div>
+  <div class="img"><img src="././assets/img/volunteer.png" alt="Foto van vrijwilligers"></div>
 </div>
 </div>
 
 </section>
-
-<script>
- function openNav() {
-    document.getElementById('myNav').style.width = '100%';
-  }
-
-  function closeNav() {
-    document.getElementById('myNav').style.width = '0%';
-  }</script>
 
 

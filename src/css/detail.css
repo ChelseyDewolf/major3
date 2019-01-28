@@ -1,15 +1,3 @@
-.detail {
-  /* margin-top: 5rem;
-  padding-bottom: 3rem;
-  background-image:
-    linear-gradient(
-      to right,
-      var(--accent-color),
-      var(--accent-color) 110rem,
-      white 110rem
-    ); */
-}
-
 .detail-bg {
   margin-top: 10rem;
   background-image:
@@ -138,12 +126,16 @@
 }
 
 .data {
+  font-size: 2rem;
+
   @media (--md) {
     display: none;
   }
 }
 
 .data-twee {
+  font-size: 1.8rem;
+
   @media (--md) {
     display: none;
   }

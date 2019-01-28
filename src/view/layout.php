@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
     <?php echo $css;?>
   </head>
   <body>
+  <a class="skiplink" href="#main">skip to main content</a>
         <?php echo $content;?>
 
            <footer class="footer">

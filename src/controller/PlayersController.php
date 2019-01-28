@@ -19,12 +19,8 @@ class PlayersController extends Controller {
 
       $this->set('acts', $acts);
 
+      $this->set('title', "Home");
 
-
-    // $this->set('players', $players);
-    $this->set('title', "Home");
-
-    // $this->set('countries', $this->playerDAO->selectAllCountries());
   }
 
   public function programma() {
@@ -49,7 +45,6 @@ class PlayersController extends Controller {
 
       $programmas = $this->playerDAO->search($search, $dag, $genre, $locatie);
 
-      // $this->set('nationality',$_GET['nationality']);
     }else{
       $programmas = $this->playerDAO->search();
       $this->set('name','');
@@ -61,7 +56,7 @@ class PlayersController extends Controller {
       echo json_encode($programmas);
       exit();
     }
-    // $programmas = $playerDAO->test();
+
     $this->set('programmas', $programmas);
     $this->set('title', "Programma");
   }
@@ -79,39 +74,5 @@ class PlayersController extends Controller {
     $this->set('randomActs', $randomActs);
     $this->set('title', "Detail");
   }
-
-/*
-  private function handleSearchPlayer() {
-
-    if (!$searchPlayersResult) {
-      $errors = "No players found";
-      $this->set('errors', $errors);
-      if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-        header('Content-Type: application/json');
-        echo json_encode(array(
-          'result' => 'error',
-          'errors' => $errors
-        ));
-        exit();
-      }else{
-        return $errors;
-      }
-      $_SESSION['error'] = $errors;
-    } else {
-      if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-        header('Content-Type: application/json');
-        echo json_encode(array(
-          'result' => 'ok',
-          'todo' => $searchPlayersResult
-        ));
-        exit();
-      }else{
-        return searchPlayersResult;
-      }
-      $_SESSION['info'] = count($searchPlayersResult). " players found";
-      header('Location: index.php');
-      exit();
-    }
-  }*/
 
 }

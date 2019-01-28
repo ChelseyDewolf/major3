@@ -12,6 +12,7 @@
   --lightest-grey: #f1f2f2;
   --green-grey: #7c98a3;
   --white: white;
+  --glacial-indifference: 'Glacial Indifference';
 }
 
 @custom-media --xs screen and (min-width: 0);
@@ -72,6 +73,7 @@ a {
 
 .highlight {
   color: var(--accent-color);
+  padding: 0 .4rem;
 }
 
 .error {
@@ -154,4 +156,20 @@ a {
 
 .zwart {
   color: black;
+}
+
+.skiplink {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.skiplink:focus {
+  right: auto;
+}
+
+a:focus {
+  background-color: deeppink;
+  outline: none;
+  color: white;
 }

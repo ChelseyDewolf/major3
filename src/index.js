@@ -1,5 +1,29 @@
 require('./style.css');
 {
+  // --------------- Hamburger + FilterOverlay ---------------
+
+  const $openNav = document.querySelector('.testje');
+  const $closeNav = document.querySelector('.closebtn');
+  const $openFilter = document.querySelector('.button-responsive');
+  const $closeFilterEen = document.querySelector('.filter-overlay-exit');
+  const $closeFilterTwee = document.querySelector('.filter-checkbox__button');
+
+  const handleOpenNav = () => {
+    document.getElementById('myNav').style.width = '100%';
+  };
+
+  const handleCloseNav = () => {
+    document.getElementById('myNav').style.width = '0';
+  };
+
+  const handleOpenFilter = () => {
+    document.getElementById('myFilter').style.width = '32rem';
+  };
+
+  const handleCloseFilter = () => {
+    document.getElementById('myFilter').style.width = '0';
+  };
+
   // --------------- Timer ---------------
   const second = 1000;
   const minute = second * 60;
@@ -11,7 +35,6 @@ require('./style.css');
   const remainDays = () => {
     if (document.querySelector('.remaining-days')) {
       setInterval(() => {
-        console.log(gap);
         const present = new Date().getTime(),
           gap = timeRemaining - present;
 
@@ -27,22 +50,6 @@ require('./style.css');
       }, 100);
     }
   };
-  // const x = setInterval(function() {
-  //   if (document.querySelector('.remaining-days')) {
-  //     const present = new Date().getTime(),
-  //       gap = timeRemaining - present;
-
-  //     (document.querySelector('.remaining-days').innerText = Math.floor(
-  //       gap / day
-  //     )),
-  //     (document.querySelector('.remaining-hours').innerText = Math.floor(
-  //       (gap % day) / hour
-  //     )),
-  //     (document.querySelector('.remaining-minutes').innerText = Math.floor(
-  //       (gap % hour) / minute
-  //     ));
-  //   }
-  // });
 
   // --------------- Filter ---------------
 
@@ -55,13 +62,19 @@ require('./style.css');
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
     const $forms = document.querySelectorAll(`.footer-form`);
-    console.log($forms);
     $forms.forEach($form => {
       $form.noValidate = true;
       $form.addEventListener(`submit`, handeSubmitForm);
 
       addValidationListeners(Array.from($form.elements));
     });
+    $openNav.addEventListener(`click`, handleOpenNav);
+    $closeNav.addEventListener(`click`, handleCloseNav);
+    if (document.querySelector('.button-responsive')) {
+      $openFilter.addEventListener(`click`, handleOpenFilter);
+      $closeFilterEen.addEventListener(`click`, handleCloseFilter);
+      $closeFilterTwee.addEventListener(`click`, handleCloseFilter);
+    }
   };
 
   const handleLoadPlayers = data => {
@@ -91,7 +104,6 @@ require('./style.css');
   };
 
   const handleSubmitFilterForm = e => {
-    console.log('submit');
     e.preventDefault();
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()

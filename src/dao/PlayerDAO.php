@@ -79,19 +79,11 @@ class PlayerDAO extends DAO {
         $stmt->bindValue(":locatie" . $index, $locatieEnkel);
       }
     }
-    // if (!empty($nationality)) {
-    //   $stmt->bindValue(':nationality', $nationality);
-    // }
+
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  // public function selectAllCountries() {
-  //   $sql = "SELECT DISTINCT `Nationality` FROM `players` ORDER BY `Nationality` ASC";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->execute();
-  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // }
 
   public function selectById($id){
     $sql = "SELECT shows.id as showid, shows.show_name, shows.genre, program.id as programid, shows.info, shows.pic, shows.extra_pic_een, shows.extra_pic_twee, shows.extra_pic_drie, shows.extra_info, program.date as dag, program.start as hour, program.location_id, artists.site, locations.location_name
@@ -109,13 +101,6 @@ class PlayerDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
-  // public function selectAllActs($limit = 100){
-  //   $sql = "SELECT * FROM `shows` LIMIT :limit";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->bindValue(':limit', $limit);
-  //   $stmt->execute();
-  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // }
 
   public function uitgelicht($limit = 6){
     $sql = "SELECT shows.id, shows.show_name, program.id as programid, shows.info, shows.pic, program.date as date, program.start as hour FROM `shows` INNER JOIN `program` ON `shows`.`id` = `program`.`show_id` ORDER BY RAND() LIMIT :limit";

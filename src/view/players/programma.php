@@ -1,6 +1,6 @@
 <header class="bg">
 <div class="logo-nav__container nav__programma container">
-  <a href="index.php"><img class="logo" src="././assets/img/logo.png" alt=""></a>
+  <a href="index.php"><img class="logo" src="././assets/img/logo.png" alt="Logo"></a>
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list__item">
@@ -17,7 +17,7 @@
       </li>
     </ul>
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <div class="overlay-content">
           <a href="index.php?">Home</a>
           <a href="index.php?page=programma">Programma</a>
@@ -25,7 +25,7 @@
           <a href="#">Contact</a>
         </div>
   </div>
-      <span class="testje" onclick="openNav()">Menu &#9776;</span>
+      <span class="testje">Menu &#9776;</span>
   </nav>
   </div>
   </header>
@@ -87,12 +87,12 @@
               </div>
             </div>
               <div class="button-responsive-container">
-               <span class="button button-responsive" onclick="openFilter()">Open Filter</span>
+               <span class="button button-responsive">Open Filter</span>
               </div>
           </div>
           <div class="filter-acts-container">
           <div id="myFilter" class="filter-overlay">
-            <a href="javascript:void(0)" class="closebtn filter-overlay-exit" onclick="closeFilter()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn filter-overlay-exit">&times;</a>
               <div class="filter-overlay-content">
           <fieldset class="fieldset">
             <div class="form-width responsive-form-width">
@@ -125,7 +125,7 @@
             <input type="checkbox" name="locatie[]" value="5" <?php if(in_array('5', $checkboxTweeArr)) echo 'checked'; ?>>Yzerhand
               </div>
               <div class="checkbox">
-            <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>vrasenstraat
+            <input type="checkbox" name="locatie[]" value="6" <?php if(in_array('6', $checkboxTweeArr)) echo 'checked'; ?>>Vrasenstraat
               </div>
               <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="7" <?php if(in_array('7', $checkboxTweeArr)) echo 'checked'; ?>>Warande
@@ -145,7 +145,7 @@
               <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="12" <?php if(in_array('12', $checkboxTweeArr)) echo 'checked'; ?>>Op de straat
               </div>
-            <input class="button filter-checkbox__button" onclick="closeFilter()" type="submit" value="Filter">
+            <input class="button filter-checkbox__button" type="submit" value="Filter">
             <a href="index.php?page=programma" class="button  filter-checkbox__button__verwijder">Verwijder Filter</a>
             </div>
             </div>
@@ -204,7 +204,7 @@
               <div class="checkbox">
             <input type="checkbox" name="locatie[]" value="12" <?php if(in_array('12', $checkboxTweeArr)) echo 'checked'; ?>>Op de straat
               </div>
-            <input class="button filter-checkbox__button" onclick="closeFilter()" type="submit" value="Filter">
+            <input class="button filter-checkbox__button" type="submit" value="Filter">
             <a href="index.php?page=programma" class="button  filter-checkbox__button__verwijder">Verwijder Filter</a>
             </div>
             </div>
@@ -220,7 +220,7 @@
               <article class="programma-act-grid-container">
               <h3 class="hidden"><?php echo $programma['show_name'];?></h3>
               <div class="programma-act-foto">
-              <img class="foto" src="././assets/img/<?php echo $programma['pic'];?>" alt="">
+              <img class="foto" src="././assets/img/<?php echo $programma['pic'];?>" alt="Foto van de act '<?php echo $programma['pic'];?>'">
               </div>
               <div class="programma-act-tekst">
                 <p class="programma-act-titel"><?php echo $programma['show_name'];?></p>
@@ -239,21 +239,3 @@
       </form>
 
   </section>
-  <script>
- function openFilter() {
-    document.getElementById('myFilter').style.width = '32rem';
-  }
-
-  function closeFilter() {
-    document.getElementById('myFilter').style.width = '0%';
-
-  }
-
-  function openNav() {
-    document.getElementById('myNav').style.width = '100%';
-  }
-
-  function closeNav() {
-    document.getElementById('myNav').style.width = '0%';
-  }
-  </script>
